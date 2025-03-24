@@ -4,95 +4,138 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kooyo - The One</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-    <header>
-        <h1>Kooyo - The One</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Productos</a></li>
-                <li><a href="#">Historia</a></li>
-                <li><a href="#">Fabricación</a></li>
-                <li><a href="#">Equipo</a></li>
-            </ul>
-        </nav>
+<body class="bg-light">
+    <header class="bg-dark text-white py-3">
+        <div class="container">
+            <h1 class="text-center">Kooyo - The One</h1>
+            <nav class="nav justify-content-center">
+                <a class="nav-link text-white" href="#">Productos</a>
+                <a class="nav-link text-white" href="#">Historia</a>
+                <a class="nav-link text-white" href="#">Fabricación</a>
+                <a class="nav-link text-white" href="#">Equipo</a>
+            </nav>
+        </div>
     </header>
-    <section class="hero">
-        <h2>Kooyo - The One</h2>
-        <p>Formulado para absorber profundamente en los poros, este suero activo ayuda a lograr una piel libre de imperfecciones y a suavizar la tez.</p>
-        <button>Comprar ahora</button>
-    </section>
-    <section class="products">
-        <div class="product">
-            <img src="images/01.jpg" alt="Energy Boost">
-            <h3>Energy Boost</h3>
-            <p>Un suplemento diseñado para mejorar tus niveles de energía y ayudarte a mantenerte activo durante todo el día.</p>
-            <button>Comprar ahora</button>
-        </div>
-        <div class="product">
-            <img src="images/02.jpg" alt="Muscle Growth">
-            <h3>Muscle Growth</h3>
-            <p>Ideal para apoyar el crecimiento muscular y mantener una piel radiante y saludable.</p>
-            <button>Comprar ahora</button>
-        </div>
-        <div class="product">
-            <img src="images/03.jpg" alt="Recovery Pro">
-            <h3>Recovery Pro</h3>
-            <p>Formulado para el rejuvenecimiento celular y para restaurar la energía después de un día agotador.</p>
-            <button>Comprar ahora</button>
+
+    <section class="hero text-center py-5 bg-primary text-white">
+        <div class="container">
+            <h2>Kooyo - The One</h2>
+            <p>Formulado para absorber profundamente en los poros, este suero activo ayuda a lograr una piel libre de imperfecciones y a suavizar la tez.</p>
+            <button class="btn btn-light btn-lg">Comprar ahora</button>
         </div>
     </section>
-    <section class="featured-section">
-        <div class="stats">
-            <div>
-                <h3>50+</h3>
-                <p>Productos</p>
-            </div>
-            <div>
-                <h3>100+</h3>
-                <p>Franquicias</p>
-            </div>
-            <div>
-                <h3>1$ Million+</h3>
-                <p>Ventas</p>
-            </div>
-        </div>
-        <div class="featured-content">
-            <div class="featured-item">
-                <img src="images/featured/01.jpg" alt="NMN the One">
-                <h3>Formed Merits Hunted Unable Merely Whence</h3>
-                <p>Possession the unpleasing simplicity her uncommon. Delightful remarkably on announcing themselves entreaties favourable.</p>
-                <ul>
-                    <li>About to in so terms voice at. Equal was it would be found sense.</li>
-                    <li>The particular friendship one sufficient terminated frequently themselves.</li>
-                </ul>
-                <button>Buy Now</button>
-            </div>
-            <div class="featured-item">
-                <img src="images/featured/02.jpg" alt="Sleep the One">
-                <h3>Resolving Neglected Sir Tolerably But Existence</h3>
-                <p>Hill sold ham men made lose case. Views abode law heard jokes too. Was are delightful solicitude discovered collecting man day.</p>
-                <ul>
-                    <li>It more shed went up is roof if loud case. Delay music in lived noise an.</li>
-                    <li>Up maids me an ample stood given. Certainly say suffering his me collected intention promotion.</li>
-                </ul>
-                <button>Buy Now</button>
-            </div>
-            <div class="featured-item">
-                <img src="images/featured/03.jpg" alt="Cheers the One">
-                <h3>Ten The Hastened Steepest Feelings Pleasant</h3>
-                <p>An brother he do colonel against minutes uncivil. Can no order warmly its basket marked. Led raising expense yet demesne weather musical.</p>
-                <ul>
-                    <li>We mr pain avoid no to. Entirely adding she abilities neglected.</li>
-                    <li>Late any far saw size want man. Which way wrong add said deal.</li>
-                </ul>
-                <button>Buy Now</button>
+
+    <section class="products py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images/01.jpg" class="card-img-top" alt="Energy Boost">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Energy Boost</h3>
+                            <p class="card-text">Un suplemento diseñado para mejorar tus niveles de energía y ayudarte a mantenerte activo durante todo el día.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images/02.jpg" class="card-img-top" alt="Muscle Growth">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Muscle Growth</h3>
+                            <p class="card-text">Ideal para apoyar el crecimiento muscular y mantener una piel radiante y saludable.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images/03.jpg" class="card-img-top" alt="Recovery Pro">
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Recovery Pro</h3>
+                            <p class="card-text">Formulado para el rejuvenecimiento celular y para restaurar la energía después de un día agotador.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
-    <footer>
+
+    <section class="featured-section py-5 bg-white">
+        <div class="container">
+            <div class="row text-center mb-4">
+                <div class="col-md-4">
+                    <div class="d-flex flex-column align-items-center">
+                        <h3>50+</h3>
+                        <p>Productos</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="d-flex flex-column align-items-center">
+                        <h3>100+</h3>
+                        <p>Franquicias</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="d-flex flex-column align-items-center">
+                        <h3>1$ Million+</h3>
+                        <p>Ventas</p>
+                    </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images/featured/01.jpg" class="card-img-top" alt="NMN the One">
+                        <div class="card-body">
+                            <h3 class="card-title">Formed Merits Hunted Unable Merely Whence</h3>
+                            <p class="card-text">Possession the unpleasing simplicity her uncommon. Delightful remarkably on announcing themselves entreaties favourable.</p>
+                            <ul>
+                                <li>About to in so terms voice at. Equal was it would be found sense.</li>
+                                <li>The particular friendship one sufficient terminated frequently themselves.</li>
+                            </ul>
+                            <button class="btn btn-primary">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images/featured/02.jpg" class="card-img-top" alt="Sleep the One">
+                        <div class="card-body">
+                            <h3 class="card-title">Resolving Neglected Sir Tolerably But Existence</h3>
+                            <p class="card-text">Hill sold ham men made lose case. Views abode law heard jokes too. Was are delightful solicitude discovered collecting man day.</p>
+                            <ul>
+                                <li>It more shed went up is roof if loud case. Delay music in lived noise an.</li>
+                                <li>Up maids me an ample stood given. Certainly say suffering his me collected intention promotion.</li>
+                            </ul>
+                            <button class="btn btn-primary">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="images/featured/03.jpg" class="card-img-top" alt="Cheers the One">
+                        <div class="card-body">
+                            <h3 class="card-title">Ten The Hastened Steepest Feelings Pleasant</h3>
+                            <p class="card-text">An brother he do colonel against minutes uncivil. Can no order warmly its basket marked. Led raising expense yet demesne weather musical.</p>
+                            <ul>
+                                <li>We mr pain avoid no to. Entirely adding she abilities neglected.</li>
+                                <li>Late any far saw size want man. Which way wrong add said deal.</li>
+                            </ul>
+                            <button class="btn btn-primary">Buy Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3">
         <p>&copy; 2025 Kooyo. Todos los derechos reservados.</p>
     </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
