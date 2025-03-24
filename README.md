@@ -19,9 +19,3 @@ El proyecto está organizado de la siguiente manera:
   - **Hero Section**: Presenta el mensaje principal de la marca y un botón de llamada a la acción.
   - **Productos**: Muestra los productos destacados con descripciones breves.
   - **Pie de Página**: Contiene información de derechos de autor.
-
-## Cómo Usar
-
-1. Clona este repositorio en tu máquina local:
-   ```bash
-   git clone https://github.com/tu-usuario/kooyo-the-one.git
