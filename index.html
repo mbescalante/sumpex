@@ -611,6 +611,7 @@
                 <p><strong>Número de Documento:</strong> <span id="receiptDocument"></span></p>
             </div>
             <div class="modal-footer">
+                <button id="downloadReceipt" class="btn btn-primary">Descargar PDF</button>
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
             </div>
         </div>
@@ -619,6 +620,8 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
     <script>
         AOS.init();
     </script>
@@ -707,5 +710,77 @@
             });
         });
     </script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const botonDescargarBoleta = document.getElementById('downloadReceipt');
+
+        botonDescargarBoleta.addEventListener('click', function () {
+            // Importar jsPDF
+            const { jsPDF } = window.jspdf;
+            const doc = new jsPDF();
+
+            // Obtener los datos de la boleta
+            const metodoPago = document.getElementById('receiptPaymentMethod').textContent;
+            const monto = document.getElementById('receiptAmount').textContent;
+            const nombre = document.getElementById('receiptName').textContent;
+            const correo = document.getElementById('receiptEmail').textContent;
+            const numeroDocumento = document.getElementById('receiptDocument').textContent;
+
+            // Configurar encabezado
+            doc.setFontSize(18);
+            doc.setFont("helvetica", "bold");
+            doc.text("BOLETA DE PAGO", 105, 20, { align: "center" });
+
+            // Información de la empresa
+            doc.setFontSize(12);
+            doc.setFont("helvetica", "normal");
+            doc.text("Empresa: Kooyo S.A.", 10, 30);
+            doc.text("RUC: 12345678901", 10, 36);
+            doc.text("Dirección: Av. Siempre Viva 123, Lima, Perú", 10, 42);
+
+            // Línea divisoria
+            doc.line(10, 45, 200, 45);
+
+            // Información del cliente
+            doc.setFont("helvetica", "bold");
+            doc.text("Detalles del Cliente", 10, 55);
+            doc.setFont("helvetica", "normal");
+            doc.text(`Nombre: ${nombre}`, 10, 65);
+            doc.text(`Correo Electrónico: ${correo}`, 10, 71);
+            doc.text(`Número de Documento: ${numeroDocumento}`, 10, 77);
+
+            // Información del pago
+            doc.setFont("helvetica", "bold");
+            doc.text("Detalles del Pago", 10, 90);
+            doc.setFont("helvetica", "normal");
+            doc.text(`Método de Pago: ${metodoPago}`, 10, 100);
+            doc.text(`Monto: S/ ${monto}`, 10, 106);
+
+            // Tabla de resumen (opcional)
+            doc.setFont("helvetica", "bold");
+            doc.text("Resumen de Pago", 10, 120);
+            doc.setFont("helvetica", "normal");
+            doc.autoTable({
+                startY: 125,
+                head: [["Descripción", "Monto"]],
+                body: [
+                    ["Subtotal", `S/ ${monto}`],
+                    ["IGV (18%)", `S/ ${(monto * 0.18).toFixed(2)}`],
+                    ["Total", `S/ ${(monto * 1.18).toFixed(2)}`],
+                ],
+                theme: "grid",
+                styles: { fontSize: 10 },
+            });
+
+            // Pie de página
+            doc.setFontSize(10);
+            doc.text("Gracias por su compra.", 105, 280, { align: "center" });
+            doc.text("Kooyo S.A. - Todos los derechos reservados.", 105, 285, { align: "center" });
+
+            // Guardar el PDF
+            doc.save('boleta_pago.pdf');
+        });
+    });
+</script>
 </body>
 </html>
