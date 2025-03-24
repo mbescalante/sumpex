@@ -365,3 +365,73 @@ footer {
     background-color: #fff;
     color: #4caf50;
 }
+
+/*testimonios*/
+
+.testimonials {
+    background-color: #f8f9fa;
+}
+
+.testimonials h2 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+}
+
+.testimonial-card {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-card .stars {
+    color: #ffc107;
+    font-size: 18px;
+}
+
+.testimonial-card img {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+/* Espaciado adicional entre testimonios y flechas */
+.testimonials .carousel-inner {
+    margin-bottom: 30px; /* Espacio entre los testimonios y las flechas */
+}
+
+/* Ajustar la posición de las flechas */
+.custom-carousel-control {
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    border: 2px solid #000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    margin-top: 20px; /* Espacio adicional entre las flechas y los testimonios */
+    margin-left: -70px; /* Alejar la flecha izquierda */
+    margin-right: -70px; /* Alejar la flecha derecha */
+}
+
+.custom-carousel-control:hover {
+    background-color: #000;
+    border-color: #000;
+}
+
+.custom-carousel-control .carousel-control-prev-icon,
+.custom-carousel-control .carousel-control-next-icon {
+    filter: invert(1); /* Cambia el color del ícono */
+}
+
+.custom-carousel-control:hover .carousel-control-prev-icon,
+.custom-carousel-control:hover .carousel-control-next-icon {
+    filter: invert(0); /* Cambia el color del ícono al pasar el cursor */
+}
