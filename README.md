@@ -108,3 +108,18 @@ El sitio está optimizado para verse correctamente en dispositivos móviles, tab
 1. Clona este repositorio en tu máquina local:
    ```bash
    git clone https://github.com/mbescalante/sumpex.git
+
+---
+
+### Explicación:
+1. **Estructura Completa**:
+   - Incluye todas las secciones del proyecto, desde el diseño hasta el sistema de pago y la generación de PDFs.
+
+2. **Instrucciones Claras**:
+   - Explica cómo ejecutar el proyecto y probar las funcionalidades.
+
+3. **Futuras Mejoras**:
+   - Detalla posibles mejoras para el proyecto.
+
+4. **Dependencias**:
+   - Lista todas las bibliotecas y herramientas utilizadas.
