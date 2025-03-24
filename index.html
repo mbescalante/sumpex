@@ -6,6 +6,8 @@
     <title>Kooyo - The One</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body class="bg-light">
@@ -33,10 +35,10 @@
         <div class="container">
             <div class="row align-items-center">
                 <!-- Texto descriptivo -->
-                <div class="col-md-6">
+                <div class="col-md-6" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="300">
                     <h2 class="text-start">Kooyo - The One</h2>
                     <p class="text-start">
-                        Nuestro producto ha sido diseñado con tecnología de vanguardia para brindar los mejores resultados. 
+                        Nuestro producto ha sido diseñado con tecnología de vanguardia para brindar los mejores resultados.
                         Con ingredientes de alta calidad, ayuda a mejorar la apariencia de la piel, proporcionando hidratación 
                         y protección. Este suplemento es ideal para quienes buscan una solución efectiva y natural para 
                         mantener una piel saludable y radiante.
@@ -55,15 +57,15 @@
                     </div>
                     <div class="product-info ms-4">
                         <ul class="list-unstyled mb-0">
-                            <li><strong>Grasas:</strong> 0.5g</li>
-                            <li><strong>Sodio:</strong> 85mg</li>
-                            <li><strong>Carbohidratos:</strong> 13.0g</li>
-                            <li><strong>Fibra:</strong> 7.0g</li>
-                            <li><strong>Azúcar:</strong> 4.0g</li>
-                            <li><strong>Proteína:</strong> 21.0g</li>
-                            <li><strong>Calcio:</strong> 150g</li>
-                            <li><strong>Hierro:</strong> 13mg</li>
-                            <li><strong>Potasio:</strong> 409mg</li>
+                            <li><i class="bi bi-check-circle-fill text-success"></i> <strong>Grasas:</strong> 0.5g</li>
+                            <li><i class="bi bi-check-circle-fill text-success"></i> <strong>Sodio:</strong> 85mg</li>
+                            <li><i class="bi bi-check-circle-fill text-success"></i> <strong>Carbohidratos:</strong> 13.0g</li>
+                            <li><i class="bi bi-check-circle-fill text-success"></i> <strong>Fibra:</strong> 7.0g</li>
+                            <li><i class="bi bi-check-circle-fill text-success"></i> <strong>Azúcar:</strong> 4.0g</li>
+                            <li><i class="bi bi-check-circle-fill text-success"></i> <strong>Proteína:</strong> 21.0g</li>
+                            <li><i class="bi bi-check-circle-fill text-success"></i> <strong>Calcio:</strong> 150g</li>
+                            <li><i class="bi bi-check-circle-fill text-success"></i> <strong>Hierro:</strong> 13mg</li>
+                            <li><i class="bi bi-check-circle-fill text-success"></i> <strong>Potasio:</strong> 409mg</li>
                         </ul>
                     </div>
                 </div>
@@ -179,5 +181,9 @@
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
