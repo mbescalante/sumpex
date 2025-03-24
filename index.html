@@ -453,6 +453,12 @@
                                     <i class="bi bi-bank"></i> Transferencia Bancaria
                                 </label>
                             </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="paymentMethod" id="paypal">
+                                <label class="form-check-label" for="paypal">
+                                    <i class="bi bi-paypal"></i> PayPal
+                                </label>
+                            </div>
 
                             <!-- Formulario de Tarjeta de Crédito -->
                             <div id="creditCardForm" class="mt-4">
@@ -574,6 +580,14 @@
     <div class="mb-3">
         <label for="bankEmail" class="form-label">Correo Electrónico</label>
         <input type="email" id="bankEmail" class="form-control" placeholder="Ingrese su correo electrónico">
+    </div>
+</div>
+<!-- Formulario de PayPal -->
+<div id="paypalForm" class="mt-4" style="display: none;">
+    <h6>Detalles de PayPal</h6>
+    <div class="mb-3">
+        <label for="paypalEmail" class="form-label">Correo Electrónico de PayPal</label>
+        <input type="email" id="paypalEmail" class="form-control" placeholder="Ingrese su correo de PayPal">
     </div>
 </div>
                         <!-- Resumen del Pago -->
@@ -778,6 +792,59 @@
             doc.save('boleta_pago.pdf');
         });
     });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const opcionTarjeta = document.getElementById('creditCard');
+    const opcionEfectivo = document.getElementById('cash');
+    const opcionTransferencia = document.getElementById('bankTransfer');
+    const opcionPayPal = document.getElementById('paypal'); // Nueva opción
+
+    const formularioTarjeta = document.getElementById('creditCardForm');
+    const formularioEfectivo = document.getElementById('cashForm');
+    const formularioTransferencia = document.getElementById('bankTransferForm');
+    const formularioPayPal = document.getElementById('paypalForm'); // Nuevo formulario
+
+    // Mostrar el formulario de tarjeta solo si se selecciona "Tarjeta de Crédito"
+    opcionTarjeta.addEventListener('change', function () {
+        if (opcionTarjeta.checked) {
+            formularioTarjeta.style.display = 'block';
+            formularioEfectivo.style.display = 'none';
+            formularioTransferencia.style.display = 'none';
+            formularioPayPal.style.display = 'none';
+        }
+    });
+
+    // Mostrar el formulario de efectivo solo si se selecciona "Efectivo"
+    opcionEfectivo.addEventListener('change', function () {
+        if (opcionEfectivo.checked) {
+            formularioEfectivo.style.display = 'block';
+            formularioTarjeta.style.display = 'none';
+            formularioTransferencia.style.display = 'none';
+            formularioPayPal.style.display = 'none';
+        }
+    });
+
+    // Mostrar el formulario de transferencia bancaria solo si se selecciona "Transferencia Bancaria"
+    opcionTransferencia.addEventListener('change', function () {
+        if (opcionTransferencia.checked) {
+            formularioTransferencia.style.display = 'block';
+            formularioTarjeta.style.display = 'none';
+            formularioEfectivo.style.display = 'none';
+            formularioPayPal.style.display = 'none';
+        }
+    });
+
+    // Mostrar el formulario de PayPal solo si se selecciona "PayPal"
+    opcionPayPal.addEventListener('change', function () {
+        if (opcionPayPal.checked) {
+            formularioPayPal.style.display = 'block';
+            formularioTarjeta.style.display = 'none';
+            formularioEfectivo.style.display = 'none';
+            formularioTransferencia.style.display = 'none';
+        }
+    });
+});
 </script>
 <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-float">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon">

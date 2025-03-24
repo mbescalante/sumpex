@@ -444,7 +444,12 @@
                                     <i class="bi bi-bank"></i> Bank Transfer
                                 </label>
                             </div>
-
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="paymentMethod" id="paypal">
+                                <label class="form-check-label" for="paypal">
+                                    <i class="bi bi-paypal"></i> PayPal
+                                </label>
+                            </div>
                             <!-- Credit Card Form -->
                             <div id="creditCardForm" class="mt-4">
                                 <h6>Credit Card Details</h6>
@@ -567,6 +572,14 @@
         <input type="email" id="bankEmail" class="form-control" placeholder="Enter email">
     </div>
 </div>
+<!-- PayPal Form -->
+<div id="paypalForm" class="mt-4" style="display: none;">
+    <h6>PayPal Details</h6>
+    <div class="mb-3">
+        <label for="paypalEmail" class="form-label">PayPal Email</label>
+        <input type="email" id="paypalEmail" class="form-control" placeholder="Enter your PayPal email">
+    </div>
+</div>
                         <!-- Payment summary -->
                         <div class="col-md-4">
                             <h6>Payment summary</h6>
@@ -605,6 +618,8 @@
         </div>
     </div>
 </div>
+
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
@@ -778,6 +793,59 @@
             }
         });
     });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const creditCardOption = document.getElementById('creditCard');
+    const cashOption = document.getElementById('cash');
+    const bankTransferOption = document.getElementById('bankTransfer');
+    const paypalOption = document.getElementById('paypal'); // New option
+
+    const creditCardForm = document.getElementById('creditCardForm');
+    const cashForm = document.getElementById('cashForm');
+    const bankTransferForm = document.getElementById('bankTransferForm');
+    const paypalForm = document.getElementById('paypalForm'); // New form
+
+    // Show the credit card form only if "Credit Card" is selected
+    creditCardOption.addEventListener('change', function () {
+        if (creditCardOption.checked) {
+            creditCardForm.style.display = 'block';
+            cashForm.style.display = 'none';
+            bankTransferForm.style.display = 'none';
+            paypalForm.style.display = 'none';
+        }
+    });
+
+    // Show the cash form only if "Cash" is selected
+    cashOption.addEventListener('change', function () {
+        if (cashOption.checked) {
+            cashForm.style.display = 'block';
+            creditCardForm.style.display = 'none';
+            bankTransferForm.style.display = 'none';
+            paypalForm.style.display = 'none';
+        }
+    });
+
+    // Show the bank transfer form only if "Bank Transfer" is selected
+    bankTransferOption.addEventListener('change', function () {
+        if (bankTransferOption.checked) {
+            bankTransferForm.style.display = 'block';
+            creditCardForm.style.display = 'none';
+            cashForm.style.display = 'none';
+            paypalForm.style.display = 'none';
+        }
+    });
+
+    // Show the PayPal form only if "PayPal" is selected
+    paypalOption.addEventListener('change', function () {
+        if (paypalOption.checked) {
+            paypalForm.style.display = 'block';
+            creditCardForm.style.display = 'none';
+            cashForm.style.display = 'none';
+            bankTransferForm.style.display = 'none';
+        }
+    });
+});
 </script>
 <!-- WhatsApp Floating Button -->
 <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-float">
