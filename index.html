@@ -3,25 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kooyo - The One</title>
+    <title>Kooyo</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="bg-light">
-    <header class="bg-dark text-white py-3">
-        <div class="container">
-            <h1 class="text-center">Kooyo - The One</h1>
-            <nav class="nav justify-content-center">
-                <a class="nav-link text-white" href="#productos">Productos</a>
-                <a class="nav-link text-white" href="#historia">Historia</a>
-                <a class="nav-link text-white" href="#fabricacion">Fabricación</a>
-                <a class="nav-link text-white" href="#equipo">Equipo</a>
-            </nav>
+<header class="bg-dark text-white py-3 position-relative">
+    <div class="container d-flex justify-content-between align-items-center">
+        <h1 id="page-title" class="text-start mb-0 fw-bold">KOOYO</h1>
+        <nav class="nav justify-content-center">
+            <a class="nav-link text-white" href="#productos" id="nav-productos">Productos</a>
+            <a class="nav-link text-white" href="#historia" id="nav-historia">Historia</a>
+            <a class="nav-link text-white" href="#fabricacion" id="nav-fabricacion">Fabricación</a>
+            <a class="nav-link text-white" href="#equipo" id="nav-equipo">Equipo</a>
+        </nav>
+        <div class="dropdown">
+            <button id="language-toggle" class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Español
+            </button>
+            <ul class="dropdown-menu dropdown-menu-end" data-bs-auto-close="false">
+                <li><a class="dropdown-item" href="indexen.html" id="switch-to-english">English</a></li>
+                <li><a class="dropdown-item" href="index.html" id="switch-to-spanish">Español</a></li>
+            </ul>
         </div>
-    </header>
+    </div>
+</header>
 
     <section class="hero text-center py-5 bg-primary text-white">
         <div class="container">
@@ -196,11 +204,11 @@
         </div>
     </section>
     
-    <section class="more-products py-5">
+    <section id="equipo" class="more-products py-5">
         <div class="container">
-            <h2 class="text-center mb-5 text-white">Elige tu suplemento favorito</h2>
+            <h2 class="text-center mb-5 text-white">Conoce a nuestro equipo</h2>
             <p class="text-center text-light mb-5">
-                Los productos de Paleovalley son un trabajo de amor, y su única esperanza es que nuestro Organic Supergreens contenga no uno, sino 23 poderosos superalimentos orgánicos, ¡cada uno con propiedades únicas!
+                Nuestro equipo está compuesto por profesionales apasionados que trabajan incansablemente para ofrecer los mejores productos y servicios. ¡Conócelos!
             </p>
             <div class="row g-4">
                 <div class="col-md-3">

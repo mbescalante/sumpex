@@ -570,3 +570,33 @@ footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para la imagen */
     margin-top: 20px;
 }
+
+/* Estilo para el botón de idioma */
+#language-toggle {
+    width: auto;
+    padding: 10px 15px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#language-toggle:hover {
+    background-color: #f8f9fa;
+    transform: scale(1.05);
+}
+
+/* Estilo para el menú desplegable */
+.dropdown-menu {
+    min-width: 120px;
+    text-align: center;
+}
+
+.dropdown-item {
+    font-size: 14px;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #f1f1f1;
+}
