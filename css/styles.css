@@ -234,3 +234,62 @@ footer {
 .featured-item button:hover {
     background-color: #0056b3;
 }
+
+.description {
+    background-color: #f9f9f9;
+}
+
+.description h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.description p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.8;
+}
+
+.description .btn-primary {
+    background-color: #ff6b35;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.description .btn-primary:hover {
+    background-color: #ff4500;
+}
+
+.description img {
+    max-width: 300px; /* Ajusta el tamaño de la imagen */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-info {
+    font-size: 14px;
+    color: #333;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Mantén la sombra para un diseño limpio */
+}
+
+.product-info ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.product-info ul li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #555;
+}
