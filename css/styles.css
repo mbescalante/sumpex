@@ -400,6 +400,31 @@ footer {
     height: 50px;
 }
 
+/* Cuadro de testimonios */
+.testimonial-box {
+    border: 1px solid #ddd; /* Borde del cuadro */
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: #fff; /* Fondo blanco */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-box:hover {
+    transform: translateY(-5px); /* Efecto de elevación */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Sombra más intensa */
+}
+
+.testimonial-box .stars {
+    color: #ffc107; /* Color de las estrellas */
+    font-size: 18px;
+}
+
+.testimonial-box img {
+    border-radius: 50%; /* Imagen circular */
+    width: 50px;
+    height: 50px;
+}
+
 /* Espaciado adicional entre testimonios y flechas */
 .testimonials .carousel-inner {
     margin-bottom: 30px; /* Espacio entre los testimonios y las flechas */
@@ -434,4 +459,65 @@ footer {
 .custom-carousel-control:hover .carousel-control-prev-icon,
 .custom-carousel-control:hover .carousel-control-next-icon {
     filter: invert(0); /* Cambia el color del ícono al pasar el cursor */
+}
+
+/* Sección de suscripción */
+.subscribe {
+    background-color: #f77f00; /* Color de fondo naranja */
+    color: #fff;
+    border-radius: 10px;
+    padding: 40px 20px;
+}
+
+.subscribe h3 {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.subscribe p {
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+.subscribe .form-control {
+    border-radius: 5px;
+}
+
+.subscribe .btn-dark {
+    border-radius: 5px;
+}
+
+/* Pie de página */
+.footer {
+    background-color: #333;
+    color: #fff;
+}
+
+.footer h5, .footer h6 {
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.footer ul {
+    padding: 0;
+    list-style: none;
+}
+
+.footer ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer ul li a:hover {
+    color: #f77f00 !important;
+}
+
+.footer .social-icons a {
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.footer .social-icons a:hover {
+    color: #f77f00 !important;
 }
