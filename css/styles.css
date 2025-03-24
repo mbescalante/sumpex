@@ -121,3 +121,27 @@ footer {
     color: #fff;
     font-size: 14px;
 }
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.product button {
+    background-color: #ff6b35;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+.product button:hover {
+    background-color: #ff4500;
+}
