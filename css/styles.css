@@ -441,9 +441,18 @@ footer {
     justify-content: center;
     align-items: center;
     transition: all 0.3s ease;
-    margin-top: 20px; /* Espacio adicional entre las flechas y los testimonios */
-    margin-left: -70px; /* Alejar la flecha izquierda */
-    margin-right: -70px; /* Alejar la flecha derecha */
+    position: absolute; /* Posición absoluta para colocarlas sobre el carrusel */
+    top: 50%; /* Centrar verticalmente */
+    transform: translateY(-50%); /* Ajustar el centro vertical */
+    z-index: 10; /* Asegurar que estén por encima del contenido */
+}
+
+.carousel-control-prev {
+    left: -60px; /* Ajustar la posición horizontal de la flecha izquierda */
+}
+
+.carousel-control-next {
+    right: -60px; /* Ajustar la posición horizontal de la flecha derecha */
 }
 
 .custom-carousel-control:hover {
@@ -460,7 +469,6 @@ footer {
 .custom-carousel-control:hover .carousel-control-next-icon {
     filter: invert(0); /* Cambia el color del ícono al pasar el cursor */
 }
-
 /* Sección de suscripción */
 .subscribe {
     background-color: #f77f00; /* Color de fondo naranja */
