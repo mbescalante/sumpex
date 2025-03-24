@@ -294,22 +294,25 @@ footer {
     color: #555;
 }
 
-.more-products .invisible-btn {
-    background-color: transparent;
-    border: none;
-    color: transparent;
-    font-weight: bold;
-    transition: all 0.3s ease;
+.more-products {
+    background: linear-gradient(135deg, #4caf50, #2e7d32); /* Fondo degradado verde */
+    padding: 50px 0;
+    color: #fff;
 }
 
-.more-products .invisible-btn:hover {
-    background-color: #007bff; /* Cambia el color al pasar el cursor */
+.more-products h2 {
+    font-size: 32px;
+    font-weight: bold;
     color: #fff;
-    border-radius: 5px;
-    padding: 5px 10px;
+}
+
+.more-products p {
+    font-size: 16px;
+    color: #d4edda;
 }
 
 .more-products .product-card {
+    background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -341,4 +344,24 @@ footer {
 
 .more-products .product-card span {
     font-size: 16px;
+    font-weight: bold;
+}
+
+.more-products .invisible-btn {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.more-products .invisible-btn:hover {
+    background-color: #fff;
+    color: #4caf50;
 }
