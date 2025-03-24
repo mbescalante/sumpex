@@ -293,3 +293,52 @@ footer {
     font-size: 14px;
     color: #555;
 }
+
+.more-products .invisible-btn {
+    background-color: transparent;
+    border: none;
+    color: transparent;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.more-products .invisible-btn:hover {
+    background-color: #007bff; /* Cambia el color al pasar el cursor */
+    color: #fff;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.more-products .product-card {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.more-products .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.more-products .product-card img {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.more-products .product-card h4 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.more-products .product-card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.more-products .product-card span {
+    font-size: 16px;
+}
