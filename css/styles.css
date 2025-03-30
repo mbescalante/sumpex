@@ -16,8 +16,9 @@ body {
 }
 
 #page-title img {
-    width: 120px; /* Ajusta el ancho del logo */
-    height: auto; /* Mantiene la proporción de la imagen */
+    max-height: 100px; /* Limita la altura máxima del logo */
+    width: auto; /* Ajusta el ancho automáticamente para mantener la proporción */
+    object-fit: contain; /* Asegura que la imagen no se distorsione */
 }
 
 header {
@@ -25,12 +26,31 @@ header {
     top: 0;
     width: 100%;
     z-index: 1000;
-    background-color: rgba(52, 58, 64, 0.8); /* Fondo oscuro con 80% de opacidad */
-    padding: 10px 20px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, opacity 0.3s ease; /* Transición suave */
+    background-color: rgba(52, 58, 64, 0.9); /* Fondo oscuro con 90% de opacidad */
+    height: 60px; /* Altura fija del header */
+    padding: 0 20px; /* Ajusta el padding para centrar el contenido */
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra ligera */
 }
 
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px; /* Espaciado entre los elementos */
+}
+
+header nav {
+    flex-grow: 1; /* Permite que el menú ocupe el espacio restante */
+    text-align: center; /* Centra los enlaces de navegación */
+}
+
+header .dropdown {
+    flex-shrink: 0; /* Evita que el botón de idioma se reduzca */
+}
+
+/*cambiar opacidad*/
 header.transparent {
     opacity: 0.5; /* Reduce la opacidad al desplazarse */
 }
