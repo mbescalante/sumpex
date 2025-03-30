@@ -692,3 +692,38 @@ footer {
     font-weight: bold;
     margin-left: 5px;
 }
+
+/* Carrito lateral */
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Oculto inicialmente */
+    width: 300px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    z-index: 1050;
+    transition: right 0.3s ease-in-out;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.cart-header {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.cart-body {
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.cart-footer {
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+}
+
+.cart-sidebar.open {
+    right: 0; /* Muestra el carrito */
+}
