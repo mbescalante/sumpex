@@ -21,22 +21,31 @@
             <a class="nav-link text-white" href="#manufacturing" id="nav-manufacturing">Manufacturing</a>
             <a class="nav-link text-white" href="#team" id="nav-team">Team</a>
         </nav>
-        <div class="dropdown no-opacity">
-            <button id="language-toggle" class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                English
+        <div class="d-flex align-items-center">
+            <!-- Cart button -->
+            <button id="cart-button" class="btn btn-light position-relative me-3">
+                <i class="bi bi-cart-fill"></i>
+                <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    0
+                </span>
             </button>
-            <ul class="dropdown-menu dropdown-menu-end" data-bs-auto-close="false">
-                <li><a class="dropdown-item" href="index.html" id="switch-to-spanish">Español</a></li>
-                <li><a class="dropdown-item" href="indexen.html" id="switch-to-english">English</a></li>
-            </ul>
+            <!-- Language selector -->
+            <div class="dropdown no-opacity">
+                <button id="language-toggle" class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    English
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end" data-bs-auto-close="false">
+                    <li><a class="dropdown-item" href="indexen.html" id="switch-to-english">English</a></li>
+                    <li><a class="dropdown-item" href="index.html" id="switch-to-spanish">Español</a></li>
+                </ul>
+            </div>
         </div>
     </div>
 </header>
-
 <section class="hero text-center py-5 bg-primary text-white">
     <div class="container">
         <h2>Kooyo - The One</h2>
-        <p>Formulated to deeply absorb into pores, this active serum helps achieve blemish-free skin and smooth the complexion.</p>
+        <p>Formulated to deeply absorb into the pores, this active serum helps achieve blemish-free skin and smooth the complexion.</p>
     </div>
 </section>
 
@@ -48,11 +57,12 @@
                 <h2 class="text-start">Kooyo - The One</h2>
                 <p class="text-start">
                     Our product has been designed with cutting-edge technology to deliver the best results.
-                    With high-quality ingredients, it helps improve the appearance of the skin, providing hydration
-                    and protection. This supplement is ideal for those looking for an effective and natural solution to
-                    maintain healthy and radiant skin.
+                    With high-quality ingredients, it helps improve skin appearance, providing hydration 
+                    and protection. This supplement is ideal for those seeking an effective and natural solution 
+                    to maintain healthy and radiant skin.
                 </p>
-                <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#paymentModal">Buy now</button>
+                <!-- Updated button -->
+                <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#paymentModal">Buy Now</button>
                 <div class="mt-4">
                     <p><strong>500M+</strong> Happy Customers</p>
                     <p><strong>20M+</strong> Positive Reviews</p>
@@ -66,7 +76,7 @@
                 </div>
                 <div class="product-info ms-4">
                     <ul class="list-unstyled mb-0">
-                        <li><i class="bi bi-check-circle-fill text-success"></i> <strong>Fat:</strong> 0.5g</li>
+                        <li><i class="bi bi-check-circle-fill text-success"></i> <strong>Fats:</strong> 0.5g</li>
                         <li><i class="bi bi-check-circle-fill text-success"></i> <strong>Sodium:</strong> 85mg</li>
                         <li><i class="bi bi-check-circle-fill text-success"></i> <strong>Carbohydrates:</strong> 13.0g</li>
                         <li><i class="bi bi-check-circle-fill text-success"></i> <strong>Fiber:</strong> 7.0g</li>
@@ -81,7 +91,6 @@
         </div>
     </div>
 </section>
-
 <section id="history" class="history py-5">
     <div class="container">
         <h2 class="text-center mb-5">Our History</h2>
@@ -89,12 +98,12 @@
             <div class="col-md-6" data-aos="fade-right" data-aos-duration="1200">
                 <h3 class="fw-bold">The Origin of Kooyo</h3>
                 <p>
-                    Kooyo was born with the mission of revolutionizing personal care and health. Inspired by nature and backed by science, 
+                    Kooyo was born with the mission to revolutionize personal care and health. Inspired by nature and backed by science, 
                     we develop products that combine natural ingredients with advanced technology to deliver exceptional results.
                 </p>
                 <p>
-                    From our humble beginnings, we have worked tirelessly to ensure that every product is of the highest quality, 
-                    helping millions of people reach their full potential for well-being.
+                    From our humble beginnings, we have worked tirelessly to ensure that each product is of the highest quality, 
+                    helping millions of people reach their full wellness potential.
                 </p>
             </div>
             <div class="col-md-6" data-aos="fade-left" data-aos-duration="1200">
@@ -112,7 +121,7 @@
                     <img src="images/01.jpg" class="card-img-top" alt="Energy Boost">
                     <div class="card-body text-center">
                         <h3 class="card-title">Energy Boost</h3>
-                        <p class="card-text">A supplement designed to improve your energy levels and help you stay active throughout the day.</p>
+                        <p class="card-text">A supplement designed to enhance your energy levels and help you stay active throughout the day.</p>
                     </div>
                 </div>
             </div>
@@ -121,7 +130,7 @@
                     <img src="images/02.jpg" class="card-img-top" alt="Muscle Growth">
                     <div class="card-body text-center">
                         <h3 class="card-title">Muscle Growth</h3>
-                        <p class="card-text">Ideal for supporting muscle growth and maintaining radiant, healthy skin.</p>
+                        <p class="card-text">Ideal for supporting muscle growth and maintaining radiant and healthy skin.</p>
                     </div>
                 </div>
             </div>
@@ -130,7 +139,7 @@
                     <img src="images/03.jpg" class="card-img-top" alt="Recovery Pro">
                     <div class="card-body text-center">
                         <h3 class="card-title">Recovery Pro</h3>
-                        <p class="card-text">Formulated for cellular rejuvenation and to restore energy after a tiring day.</p>
+                        <p class="card-text">Formulated for cellular rejuvenation and to restore energy after an exhausting day.</p>
                     </div>
                 </div>
             </div>
@@ -163,52 +172,55 @@
         <div class="row g-4">
             <div class="col-md-4">
                 <div class="card">
-                    <img src="images/featured/01.jpg" class="card-img-top" alt="NMN The Unique">
+                    <img src="images/featured/01.jpg" class="card-img-top" alt="NMN the Only One">
                     <div class="card-body">
-                        <h3 class="card-title">Merits Formed Hunted Incapable Simply Since Then</h3>
-                        <p class="card-text">The possession of unpleasant simplicity is uncommon. Remarkably charming when advertised with favorable pleas.</p>
+                        <h3 class="card-title">Merits Formed, Hunted, Incapable, Simply Since Then</h3>
+                        <p class="card-text">The possession of little pleasant simplicity is uncommon. Remarkably charming when advertised with favorable appeals.</p>
                         <ul>
-                            <li>About to be on speaking terms. Would equally be found with sense.</li>
-                            <li>Particular friendship sufficient frequently ended by itself.</li>
+                            <li>About to be in terms of voice. The same would be found with meaning.</li>
+                            <li>Particular friendship was sufficiently ended frequently by itself.</li>
                         </ul>
+                        <!-- Updated button -->
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card">
-                    <img src="images/featured/02.jpg" class="card-img-top" alt="Dream The Unique">
+                    <img src="images/featured/02.jpg" class="card-img-top" alt="Dream the Only One">
                     <div class="card-body">
-                        <h3 class="card-title">Resolving Neglects Tolerably But Existence</h3>
-                        <p class="card-text">The hill sold ham, the men lost the case. The views of the dwelling heard jokes too. It was a lovely request discovered collecting the man's day.</p>
+                        <h3 class="card-title">Solving Oversights Tolerably but Existing</h3>
+                        <p class="card-text">The hill sold ham, men lost the case. The dwelling views also heard jokes. It was a lovely request discovered gathering the man's day.</p>
                         <ul>
-                            <li>Rose more if the noisy case was on the roof. The delayed music lived in noise.</li>
-                            <li>The maids gave me a wide position. Certainly, saying he suffered his intention of collected promotion.</li>
+                            <li>He climbed higher if the noisy case was on the roof. The delayed music lived in noise.</li>
+                            <li>The maids gave me a broad position. Certainly, saying he suffered his collected promotion intent.</li>
                         </ul>
+                        <!-- Updated button -->
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
                 <div class="card">
-                    <img src="images/featured/03.jpg" class="card-img-top" alt="Cheers The Unique">
+                    <img src="images/featured/03.jpg" class="card-img-top" alt="Cheers the Only One">
                     <div class="card-body">
-                        <h3 class="card-title">Ten Steepest Feelings Accelerated Pleasantly</h3>
-                        <p class="card-text">A brother does it against uncivilized minutes. Cannot warmly order his marked basket. Led the increase in expenses, yet the musical weather of the domain.</p>
+                        <h3 class="card-title">Ten Steepest Feelings Pleasantly Accelerated</h3>
+                        <p class="card-text">A brother does it against uncivilized minutes. He cannot warmly order his marked basket. He led the increase in expenses, yet the musical weather of the domain.</p>
                         <ul>
-                            <li>We, the lord, avoided pain. Completely adding his neglected skills.</li>
-                            <li>Saw late any size the man wanted. What wrong way added said deal.</li>
+                            <li>We, sir, avoided the pain. Completely adding his neglected skills.</li>
+                            <li>He saw late any size the man wanted. What a wrong way he added, said deal.</li>
                         </ul>
+                        <!-- Updated button -->
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
-    
+
 <section id="team" class="more-products py-5">
     <div class="container">
         <h2 class="text-center mb-5 text-white">Meet Our Team</h2>
         <p class="text-center text-light mb-5">
-            Our team is made up of passionate professionals who work tirelessly to offer the best products and services. Meet them!
+            Our team consists of passionate professionals who work tirelessly to offer the best products and services. Get to know them!
         </p>
         <div class="row g-4">
             <div class="col-md-3">
@@ -217,7 +229,7 @@
                     <h4>Essential Electrolytes</h4>
                     <p>Get <span class="text-success">FREE SHIPPING</span> if you add 2 more bags</p>
                     <div class="d-flex justify-content-between align-items-center">
-                        <button class="btn invisible-btn" data-bs-toggle="modal" data-bs-target="#paymentModal">Buy now</button>
+                        <button class="btn invisible-btn" data-bs-toggle="modal" data-bs-target="#paymentModal">Buy Now</button>
                         <div class="cart-container d-flex align-items-center">
                             <i class="bi bi-cart-plus fs-4 text-dark me-2 cart-icon" role="button"></i>
                             <span class="cart-count badge bg-primary">0</span>
@@ -225,7 +237,7 @@
                         <span class="text-dark fw-bold">$47.50</span>
                     </div>
                     <p class="free-shipping-message text-success mt-2" style="display: none;">FREE SHIPPING available!</p>
-<p class="add-more-message text-muted mt-2">Add 2 more bags to get <span class="text-success">FREE SHIPPING</span>.</p>
+                    <p class="add-more-message text-muted mt-2">Add 2 more bags to get <span class="text-success">FREE SHIPPING</span>.</p>
                 </div>
             </div>
             <div class="col-md-3">
@@ -234,7 +246,7 @@
                     <h4>Supergreens</h4>
                     <p>Get <span class="text-success">FREE SHIPPING</span> if you add 2 more bags</p>
                     <div class="d-flex justify-content-between align-items-center">
-                        <button class="btn invisible-btn" data-bs-toggle="modal" data-bs-target="#paymentModal">Buy now</button>
+                        <button class="btn invisible-btn" data-bs-toggle="modal" data-bs-target="#paymentModal">Buy Now</button>
                         <div class="cart-container d-flex align-items-center">
                             <i class="bi bi-cart-plus fs-4 text-dark me-2 cart-icon" role="button"></i>
                             <span class="cart-count badge bg-primary">0</span>
@@ -242,16 +254,17 @@
                         <span class="text-dark fw-bold">$30</span>
                     </div>
                     <p class="free-shipping-message text-success mt-2" style="display: none;">FREE SHIPPING available!</p>
-<p class="add-more-message text-muted mt-2">Add 2 more bags to get <span class="text-success">FREE SHIPPING</span>.</p>
+                    <p class="add-more-message text-muted mt-2">Add 2 more bags to get <span class="text-success">FREE SHIPPING</span>.</p>
                 </div>
             </div>
+            
             <div class="col-md-3">
                 <div class="product-card text-center p-4">
                     <img src="images/prod/03.jpg" alt="Whey Protein" class="img-fluid mb-3">
                     <h4>Whey Protein</h4>
                     <p>Get <span class="text-success">FREE SHIPPING</span> if you add 2 more bags</p>
                     <div class="d-flex justify-content-between align-items-center">
-                        <button class="btn invisible-btn" data-bs-toggle="modal" data-bs-target="#paymentModal">Buy now</button>
+                        <button class="btn invisible-btn" data-bs-toggle="modal" data-bs-target="#paymentModal">Buy Now</button>
                         <div class="cart-container d-flex align-items-center">
                             <i class="bi bi-cart-plus fs-4 text-dark me-2 cart-icon" role="button"></i>
                             <span class="cart-count badge bg-primary">0</span>
@@ -259,24 +272,25 @@
                         <span class="text-dark fw-bold">$35</span>
                     </div>
                     <p class="free-shipping-message text-success mt-2" style="display: none;">FREE SHIPPING available!</p>
-<p class="add-more-message text-muted mt-2">Add 2 more bags to get <span class="text-success">FREE SHIPPING</span>.</p>
+                    <p class="add-more-message text-muted mt-2">Add 2 more bags to get <span class="text-success">FREE SHIPPING</span>.</p>
                 </div>
             </div>
+            
             <div class="col-md-3">
                 <div class="product-card text-center p-4">
                     <img src="images/prod/04.jpg" alt="Rosehip Ylang" class="img-fluid mb-3">
                     <h4>Rosehip Ylang</h4>
                     <p>Get <span class="text-success">FREE SHIPPING</span> if you add 2 more bags</p>
                     <div class="d-flex justify-content-between align-items-center">
-                        <button class="btn invisible-btn" data-bs-toggle="modal" data-bs-target="#paymentModal">Buy now</button>
+                        <button class="btn invisible-btn" data-bs-toggle="modal" data-bs-target="#paymentModal">Buy Now</button>
                         <div class="cart-container d-flex align-items-center">
                             <i class="bi bi-cart-plus fs-4 text-dark me-2 cart-icon" role="button"></i>
                             <span class="cart-count badge bg-primary">0</span>
                         </div>
-                        <span class="text-dark fw-bold">$40</span>
+                        <span class="text-dark fw-bold">$39</span>
                     </div>
                     <p class="free-shipping-message text-success mt-2" style="display: none;">FREE SHIPPING available!</p>
-<p class="add-more-message text-muted mt-2">Add 2 more bags to get <span class="text-success">FREE SHIPPING</span>.</p>
+                    <p class="add-more-message text-muted mt-2">Add 2 more bags to get <span class="text-success">FREE SHIPPING</span>.</p>
                 </div>
             </div>
         </div>
@@ -288,13 +302,13 @@
         <h2 class="text-center mb-5">Testimonials</h2>
         <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
-                <!-- Group 1 of testimonials -->
+                <!-- Testimonial Group 1 -->
                 <div class="carousel-item active">
                     <div class="row g-4">
                         <div class="col-md-4">
                             <div class="testimonial-box p-4 bg-white shadow-sm rounded">
                                 <div class="stars mb-3">★★★★★</div>
-                                <p>"Kooyo has transformed my daily routine. I now have more energy, and my skin has never looked better. It's an incredible product!"</p>
+                                <p>"Kooyo has transformed my daily routine. I now have more energy, and my skin has never looked better. It’s an incredible product!"</p>
                                 <div class="d-flex align-items-center mt-4">
                                     <img src="images/ceos/01.jpg" alt="User 1" class="rounded-circle me-3" width="50">
                                     <div>
@@ -320,7 +334,7 @@
                         <div class="col-md-4">
                             <div class="testimonial-box p-4 bg-white shadow-sm rounded">
                                 <div class="stars mb-3">★★★★</div>
-                                <p>"Since using Kooyo, I've noticed a big difference in my energy and how I feel every day. Highly recommended!"</p>
+                                <p>"Since using Kooyo, I’ve noticed a huge difference in my energy and how I feel every day. Highly recommended!"</p>
                                 <div class="d-flex align-items-center mt-4">
                                     <img src="images/ceos/03.jpg" alt="User 3" class="rounded-circle me-3" width="50">
                                     <div>
@@ -332,13 +346,13 @@
                         </div>
                     </div>
                 </div>
-                <!-- Group 2 of testimonials -->
+                <!-- Testimonial Group 2 -->
                 <div class="carousel-item">
                     <div class="row g-4">
                         <div class="col-md-4">
                             <div class="testimonial-box p-4 bg-white shadow-sm rounded">
                                 <div class="stars mb-3">★★★★★</div>
-                                <p>"Kooyo is a revolutionary product. My skin feels softer and healthier, and my energy has improved significantly."</p>
+                                <p>"Kooyo is a revolutionary product. My skin feels softer and healthier, and my energy has significantly improved."</p>
                                 <div class="d-flex align-items-center mt-4">
                                     <img src="images/ceos/04.jpg" alt="User 4" class="rounded-circle me-3" width="50">
                                     <div>
@@ -351,7 +365,7 @@
                         <div class="col-md-4">
                             <div class="testimonial-box p-4 bg-white shadow-sm rounded">
                                 <div class="stars mb-3">★★★★</div>
-                                <p>"I've tried many products, but Kooyo really stands out. It's effective, natural, and easy to incorporate into my routine."</p>
+                                <p>"I’ve tried many products, but Kooyo truly stands out. It’s effective, natural, and easy to incorporate into my routine."</p>
                                 <div class="d-flex align-items-center mt-4">
                                     <img src="images/ceos/05.jpg" alt="User 5" class="rounded-circle me-3" width="50">
                                     <div>
@@ -364,7 +378,7 @@
                     </div>
                 </div>
             </div>
-            <!-- Carousel controls -->
+            <!-- Carousel Controls -->
             <button class="carousel-control-prev custom-carousel-control" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
@@ -377,17 +391,17 @@
     </div>
 </section>
 
-<!-- Sección de suscripción -->
+<!-- Subscription Section -->
 <section class="subscribe py-5 bg-warning text-white">
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-8">
-                <h3 class="mb-3">Subscribe to receive daily updates</h3>
-                <p>Stay up to date with the latest news and offers. Join our community and don't miss anything!</p>
+                <h3 class="mb-3">Subscribe for daily updates</h3>
+                <p>Stay up to date with the latest news and offers. Join our community and never miss a thing!</p>
             </div>
             <div class="col-md-4">
                 <form class="d-flex">
-                    <input type="email" class="form-control me-2" placeholder="Enter your email address" required>
+                    <input type="email" class="form-control me-2" placeholder="Enter your email" required>
                     <button type="submit" class="btn btn-dark">Subscribe</button>
                 </form>
             </div>
@@ -395,13 +409,13 @@
     </div>
 </section>
 
-<!-- Pie de página -->
+<!-- Footer -->
 <footer class="footer bg-dark text-white py-5">
     <div class="container">
         <div class="row">
             <div class="col-md-4">
                 <h5>Kooyo</h5>
-                <p>Particularly sufficient and impossible for a reasonable expression. However, an unpleasant preference.</p>
+                <p>Particularly sufficient and impossible by a reasonable expression. However, an unpleasant preference.</p>
                 <div class="social-icons">
                     <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
                     <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a>
@@ -430,15 +444,16 @@
             <div class="col-md-2">
                 <h6>About Us</h6>
                 <ul class="list-unstyled">
-                    <li><a href="#" class="text-white">Who are we?</a></li>
+                    <li><a href="#" class="text-white">Who we are?</a></li>
                     <li><a href="#" class="text-white">Contact Us</a></li>
-                    <li><a href="#" class="text-white">FAQ</a></li>
+                    <li><a href="#" class="text-white">Frequently Asked Questions</a></li>
                     <li><a href="#" class="text-white">Help</a></li>
                 </ul>
             </div>
         </div>
     </div>
 </footer>
+
 <div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
@@ -451,7 +466,7 @@
                     <div class="row">
                         <!-- Payment options -->
                         <div class="col-md-8">
-                            <h6>Payment method</h6>
+                            <h6>Payment Method</h6>
                             <div class="form-check">
                                 <input class="form-check-input" type="radio" name="paymentMethod" id="creditCard" checked>
                                 <label class="form-check-label" for="creditCard">
@@ -476,6 +491,7 @@
                                     <i class="bi bi-paypal"></i> PayPal
                                 </label>
                             </div>
+
                             <!-- Credit Card Form -->
                             <div id="creditCardForm" class="mt-4">
                                 <h6>Credit Card Details</h6>
@@ -505,11 +521,11 @@
                                 <div class="row">
                                     <div class="col-md-6 mb-3">
                                         <label for="firstName" class="form-label">First Name</label>
-                                        <input type="text" id="firstName" class="form-control" placeholder="Enter first name">
+                                        <input type="text" id="firstName" class="form-control" placeholder="Enter your first name">
                                     </div>
                                     <div class="col-md-6 mb-3">
                                         <label for="lastName" class="form-label">Last Name</label>
-                                        <input type="text" id="lastName" class="form-control" placeholder="Enter last name">
+                                        <input type="text" id="lastName" class="form-control" placeholder="Enter your last name">
                                     </div>
                                 </div>
                                 <div class="row">
@@ -528,21 +544,22 @@
                                 </div>
                                 <div class="mb-3">
                                     <label for="email" class="form-label">Email</label>
-                                    <input type="email" id="email" class="form-control" placeholder="Enter email">
+                                    <input type="email" id="email" class="form-control" placeholder="Enter your email">
                                 </div>
                             </div>
                         </div>
-                        <!-- Cash Form -->
+
+                        <!-- Cash Payment Form -->
 <div id="cashForm" class="mt-4" style="display: none;">
     <h6>Cash Payment Details</h6>
     <div class="row">
         <div class="col-md-6 mb-3">
             <label for="cashFirstName" class="form-label">First Name</label>
-            <input type="text" id="cashFirstName" class="form-control" placeholder="Enter first name">
+            <input type="text" id="cashFirstName" class="form-control" placeholder="Enter your first name">
         </div>
         <div class="col-md-6 mb-3">
             <label for="cashLastName" class="form-label">Last Name</label>
-            <input type="text" id="cashLastName" class="form-control" placeholder="Enter last name">
+            <input type="text" id="cashLastName" class="form-control" placeholder="Enter your last name">
         </div>
     </div>
     <div class="row">
@@ -561,15 +578,27 @@
     </div>
     <div class="mb-3">
         <label for="cashEmail" class="form-label">Email</label>
-        <input type="email" id="cashEmail" class="form-control" placeholder="Enter email">
+        <input type="email" id="cashEmail" class="form-control" placeholder="Enter your email">
     </div>
 </div>
-                    <!-- Bank Transfer Form -->
+
+<!-- Bank Transfer Form -->
 <div id="bankTransferForm" class="mt-4" style="display: none;">
     <h6>Bank Transfer Details</h6>
     <div class="mb-3">
         <label for="bankName" class="form-label">Bank Name</label>
-        <input type="text" id="bankName" class="form-control" placeholder="Enter bank name">
+        <select id="bankName" class="form-select">
+            <option value="Banco de Crédito del Perú">Banco de Crédito del Perú</option>
+            <option value="BBVA">BBVA</option>
+            <option value="Interbank">Interbank</option>
+            <option value="Scotiabank">Scotiabank</option>
+            <option value="Banco Pichincha">Banco Pichincha</option>
+            <option value="Banco Falabella">Banco Falabella</option>
+            <option value="Banco Ripley">Banco Ripley</option>
+            <option value="Banco GNB">Banco GNB</option>
+            <option value="Banco Santander Perú">Banco Santander Perú</option>
+            <option value="Banco de Comercio">Banco de Comercio</option>
+        </select>
     </div>
     <div class="mb-3">
         <label for="accountNumber" class="form-label">Account Number</label>
@@ -595,7 +624,7 @@
     </div>
     <div class="mb-3">
         <label for="bankEmail" class="form-label">Email</label>
-        <input type="email" id="bankEmail" class="form-control" placeholder="Enter email">
+        <input type="email" id="bankEmail" class="form-control" placeholder="Enter your email">
     </div>
 </div>
 <!-- PayPal Form -->
@@ -606,21 +635,14 @@
         <input type="email" id="paypalEmail" class="form-control" placeholder="Enter your PayPal email">
     </div>
 </div>
-                        <!-- Payment summary -->
-                        <div class="col-md-4">
-                            <h6>Payment summary</h6>
-                            <label for="paymentAmount" class="form-label">Amount:</label>
-                            <input type="number" id="paymentAmount" class="form-control mb-3" placeholder="Enter the amount" min="0" step="0.01">
-                            <button id="confirmPayment" class="btn btn-primary w-100">Confirm payment</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 
-    <!-- Modal for Receipt -->
+<!-- Payment Summary -->
+<div class="col-md-4">
+    <h6>Payment Summary</h6>
+    <p><strong>Total:</strong> <span id="paymentTotal">$0.00</span></p>
+    <button id="confirmPayment" class="btn btn-primary w-100">Confirm Payment</button>
+</div>
+<!-- Receipt Modal -->
 <div class="modal fade" id="receiptModal" tabindex="-1" aria-labelledby="receiptModalLabel" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -631,7 +653,7 @@
             <div class="modal-body">
                 <h6>Payment Details</h6>
                 <p><strong>Payment Method:</strong> <span id="receiptPaymentMethod"></span></p>
-                <p><strong>Amount:</strong> $ <span id="receiptAmount"></span></p>
+                <p><strong>Amount:</strong> S/ <span id="receiptAmount"></span></p>
                 <h6>Customer Details</h6>
                 <p><strong>Name:</strong> <span id="receiptName"></span></p>
                 <p><strong>Email:</strong> <span id="receiptEmail"></span></p>
@@ -644,15 +666,14 @@
         </div>
     </div>
 </div>
-
 <div id="cart-sidebar" class="cart-sidebar">
     <div class="cart-header d-flex justify-content-between align-items-center">
-        <h5 class="mb-0">Cart</h5>
+        <h5 class="mb-0">Shopping Cart</h5>
         <button class="btn-close" id="close-cart" aria-label="Close"></button>
     </div>
     <div class="cart-body">
         <ul id="cart-items" class="list-unstyled">
-            <!-- Products added to the cart will appear here -->
+            <!-- Added products will appear here -->
         </ul>
         <div class="cart-summary mt-4">
             <p><strong>Subtotal:</strong> <span id="cart-subtotal">$0.00</span></p>
@@ -662,19 +683,18 @@
     </div>
     <div class="cart-footer">
         <button class="btn btn-primary w-100 mb-2" id="go-to-cart">Go to Cart</button>
-        <button class="btn btn-success w-100" id="checkout">Checkout</button>
+        <button class="btn btn-success w-100" id="checkout" data-bs-toggle="modal" data-bs-target="#paymentModal">Buy Now</button>
     </div>
 </div>
-
-    <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
-    <script>
-        AOS.init();
-    </script>
-<script>
+ <!-- Bootstrap JS -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+ <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+ <script>
+     AOS.init();
+ </script>
+ <script>
     document.addEventListener('DOMContentLoaded', function () {
         const creditCardOption = document.getElementById('creditCard');
         const cashOption = document.getElementById('cash');
@@ -683,7 +703,7 @@
         const cashForm = document.getElementById('cashForm');
         const bankTransferForm = document.getElementById('bankTransferForm');
 
-        // Mostrar el formulario de tarjeta solo si se selecciona "Credit Card"
+        // Show the credit card form only if "Credit Card" is selected
         creditCardOption.addEventListener('change', function () {
             if (creditCardOption.checked) {
                 creditCardForm.style.display = 'block';
@@ -692,7 +712,7 @@
             }
         });
 
-        // Mostrar el formulario de efectivo solo si se selecciona "Cash"
+        // Show the cash form only if "Cash" is selected
         cashOption.addEventListener('change', function () {
             if (cashOption.checked) {
                 cashForm.style.display = 'block';
@@ -701,7 +721,7 @@
             }
         });
 
-        // Mostrar el formulario de transferencia bancaria solo si se selecciona "Bank Transfer"
+        // Show the bank transfer form only if "Bank Transfer" is selected
         bankTransferOption.addEventListener('change', function () {
             if (bankTransferOption.checked) {
                 bankTransferForm.style.display = 'block';
@@ -712,133 +732,146 @@
     });
 </script>
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const confirmPaymentButton = document.getElementById('confirmPayment');
+document.addEventListener('DOMContentLoaded', function () {
+    const confirmPaymentButton = document.getElementById('confirmPayment');
 
-        confirmPaymentButton.addEventListener('click', function () {
-            // Get the selected payment method
-            let paymentMethod = '';
-            if (document.getElementById('creditCard').checked) {
-                paymentMethod = 'Credit Card';
-            } else if (document.getElementById('cash').checked) {
-                paymentMethod = 'Cash';
-            } else if (document.getElementById('bankTransfer').checked) {
-                paymentMethod = 'Bank Transfer';
-            }
+    confirmPaymentButton.addEventListener('click', function () {
+        // Get the selected payment method
+        let paymentMethod = '';
+        if (document.getElementById('creditCard')?.checked) {
+            paymentMethod = 'Credit Card (Visa, MasterCard)';
+        } else if (document.getElementById('cash')?.checked) {
+            paymentMethod = 'Cash (BCP)';
+        } else if (document.getElementById('bankTransfer')?.checked) {
+            paymentMethod = 'Bank Transfer';
+        } else if (document.getElementById('paypal')?.checked) {
+            paymentMethod = 'PayPal';
+        }
 
-            // Get form data based on the selected payment method
-            let name = '';
-            let email = '';
-            let documentNumber = '';
-            const amount = document.getElementById('paymentAmount').value;
+        // Validate if a payment method is selected
+        if (!paymentMethod) {
+            alert('Please select a payment method.');
+            return;
+        }
 
-            if (paymentMethod === 'Credit Card') {
-                name = document.getElementById('firstName').value + ' ' + document.getElementById('lastName').value;
-                email = document.getElementById('email').value;
-                documentNumber = document.getElementById('documentNumber').value;
-            } else if (paymentMethod === 'Cash') {
-                name = document.getElementById('cashFirstName').value + ' ' + document.getElementById('cashLastName').value;
-                email = document.getElementById('cashEmail').value;
-                documentNumber = document.getElementById('cashDocumentNumber').value;
-            } else if (paymentMethod === 'Bank Transfer') {
-                name = document.getElementById('accountHolder').value;
-                email = document.getElementById('bankEmail').value;
-                documentNumber = document.getElementById('bankDocumentNumber').value;
-            }
+        // Get form data based on the selected payment method
+        let name = '';
+        let email = '';
+        let documentNumber = '';
+        const amount = parseFloat(document.getElementById('cart-total')?.textContent.replace('$', '')) || 0.00; // Cart total
 
-            // Display the data in the receipt modal
-            document.getElementById('receiptPaymentMethod').textContent = paymentMethod;
-            document.getElementById('receiptAmount').textContent = amount;
-            document.getElementById('receiptName').textContent = name;
+        if (paymentMethod === 'Credit Card (Visa, MasterCard)') {
+            name = `${document.getElementById('firstName')?.value || ''} ${document.getElementById('lastName')?.value || ''}`.trim();
+            documentNumber = document.getElementById('documentNumber')?.value || '';
+        } else if (paymentMethod === 'Cash (BCP)') {
+            name = `${document.getElementById('cashFirstName')?.value || ''} ${document.getElementById('cashLastName')?.value || ''}`.trim();
+            email = document.getElementById('cashEmail')?.value || '';
+            documentNumber = document.getElementById('cashDocumentNumber')?.value || '';
+        } else if (paymentMethod === 'Bank Transfer') {
+            name = document.getElementById('accountHolder')?.value || '';
+            documentNumber = document.getElementById('bankDocumentNumber')?.value || '';
+        } else if (paymentMethod === 'PayPal') {
+            email = document.getElementById('paypalEmail')?.value || '';
+        }
+
+        // Display data in the receipt modal
+        document.getElementById('receiptPaymentMethod').textContent = paymentMethod;
+        document.getElementById('receiptAmount').textContent = amount.toFixed(2);
+
+        // Show or hide fields based on the payment method
+        if (paymentMethod === 'PayPal') {
+            document.getElementById('receiptName').parentElement.style.display = 'none';
+            document.getElementById('receiptDocument').parentElement.style.display = 'none';
             document.getElementById('receiptEmail').textContent = email;
+            document.getElementById('receiptEmail').parentElement.style.display = 'block';
+        } else {
+            document.getElementById('receiptName').textContent = name;
             document.getElementById('receiptDocument').textContent = documentNumber;
+            document.getElementById('receiptEmail').textContent = email;
 
-            // Show the receipt modal
-            const receiptModal = new bootstrap.Modal(document.getElementById('receiptModal'));
-            receiptModal.show();
-        });
+            document.getElementById('receiptName').parentElement.style.display = name ? 'block' : 'none';
+            document.getElementById('receiptDocument').parentElement.style.display = documentNumber ? 'block' : 'none';
+            document.getElementById('receiptEmail').parentElement.style.display = email ? 'block' : 'none';
+        }
+
+        // Show the receipt modal
+        const receiptModal = new bootstrap.Modal(document.getElementById('receiptModal'));
+        receiptModal.show();
     });
+});
 </script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        const downloadReceiptButton = document.getElementById('downloadReceipt');
+    const downloadReceiptButton = document.getElementById('downloadReceipt');
 
-        downloadReceiptButton.addEventListener('click', function () {
-            try {
-                // Import jsPDF
-                const { jsPDF } = window.jspdf;
-                const doc = new jsPDF();
+    downloadReceiptButton.addEventListener('click', function () {
+        // Import jsPDF
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF();
 
-                // Get receipt data
-                const paymentMethod = document.getElementById('receiptPaymentMethod').textContent;
-                const amount = document.getElementById('receiptAmount').textContent;
-                const name = document.getElementById('receiptName').textContent;
-                const email = document.getElementById('receiptEmail').textContent;
-                const documentNumber = document.getElementById('receiptDocument').textContent;
+        // Get receipt details
+        const paymentMethod = document.getElementById('receiptPaymentMethod').textContent;
+        const amount = document.getElementById('receiptAmount').textContent;
+        const name = document.getElementById('receiptName').textContent;
+        const email = document.getElementById('receiptEmail').textContent;
+        const documentNumber = document.getElementById('receiptDocument').textContent;
 
-                // Configure header
-                doc.setFontSize(18);
-                doc.setFont("helvetica", "bold");
-                doc.text("PAYMENT RECEIPT", 105, 20, { align: "center" });
+        // Configure header
+        doc.setFontSize(18);
+        doc.setFont("helvetica", "bold");
+        doc.text("PAYMENT RECEIPT", 105, 20, { align: "center" });
 
-                // Company information
-                doc.setFontSize(12);
-                doc.setFont("helvetica", "normal");
-                doc.text("Company: Kooyo S.A.", 10, 30);
-                doc.text("RUC: 12345678901", 10, 36);
-                doc.text("Address: Av. Siempre Viva 123, Lima, Peru", 10, 42);
+        // Company information
+        doc.setFontSize(12);
+        doc.setFont("helvetica", "normal");
+        doc.text("Company: Kooyo S.A.", 10, 30);
+        doc.text("RUC: 12345678901", 10, 36);
+        doc.text("Address: Av. Siempre Viva 123, Lima, Peru", 10, 42);
 
-                // Divider line
-                doc.line(10, 45, 200, 45);
+        // Divider line
+        doc.line(10, 45, 200, 45);
 
-                // Customer information
-                doc.setFont("helvetica", "bold");
-                doc.text("Customer Details", 10, 55);
-                doc.setFont("helvetica", "normal");
-                doc.text(`Name: ${name}`, 10, 65);
-                doc.text(`Email: ${email}`, 10, 71);
-                doc.text(`Document Number: ${documentNumber}`, 10, 77);
+        // Customer information
+        doc.setFont("helvetica", "bold");
+        doc.text("Customer Details", 10, 55);
+        doc.setFont("helvetica", "normal");
+        doc.text(`Name: ${name}`, 10, 65);
+        doc.text(`Email: ${email}`, 10, 71);
+        doc.text(`Document Number: ${documentNumber}`, 10, 77);
 
-                // Payment information
-                doc.setFont("helvetica", "bold");
-                doc.text("Payment Details", 10, 90);
-                doc.setFont("helvetica", "normal");
-                doc.text(`Payment Method: ${paymentMethod}`, 10, 100);
-                doc.text(`Amount: $${amount}`, 10, 106);
+        // Payment details
+        doc.setFont("helvetica", "bold");
+        doc.text("Payment Details", 10, 90);
+        doc.setFont("helvetica", "normal");
+        doc.text(`Payment Method: ${paymentMethod}`, 10, 100);
+        doc.text(`Amount: $ ${amount}`, 10, 106); // Changed to dollars
 
-                // Payment summary table
-                if (doc.autoTable) {
-                    doc.setFont("helvetica", "bold");
-                    doc.text("Payment Summary", 10, 120);
-                    doc.setFont("helvetica", "normal");
-                    doc.autoTable({
-                        startY: 125,
-                        head: [["Description", "Amount"]],
-                        body: [
-                            ["Subtotal", `$${amount}`],
-                            ["Tax (18%)", `$${(amount * 0.18).toFixed(2)}`],
-                            ["Total", `$${(amount * 1.18).toFixed(2)}`],
-                        ],
-                        theme: "grid",
-                        styles: { fontSize: 10 },
-                    });
-                } else {
-                    console.error("autoTable is not available. Make sure to include jspdf-autotable.");
-                }
-
-                // Footer
-                doc.setFontSize(10);
-                doc.text("Thank you for your purchase.", 105, 280, { align: "center" });
-                doc.text("Kooyo S.A. - All rights reserved.", 105, 285, { align: "center" });
-
-                // Save the PDF
-                doc.save('payment_receipt.pdf');
-            } catch (error) {
-                console.error("Error generating the PDF:", error);
-                alert("There was an error generating the PDF. Please check the console for more details.");
-            }
+        // Summary table (optional)
+        doc.setFont("helvetica", "bold");
+        doc.text("Payment Summary", 10, 120);
+        doc.setFont("helvetica", "normal");
+        doc.autoTable({
+            startY: 125,
+            head: [["Description", "Amount"]],
+            body: [
+                ["Subtotal", `$ ${amount}`],
+                ["Tax (18%)", `$ ${(amount * 0.18).toFixed(2)}`],
+                ["Total", `$ ${(amount * 1.18).toFixed(2)}`],
+            ],
+            theme: "grid",
+            styles: { fontSize: 10 },
         });
+
+        // Footer
+        doc.setFontSize(10);
+        doc.text("Thank you for your purchase.", 105, 280, { align: "center" });
+        doc.text("Kooyo S.A. - All rights reserved.", 105, 285, { align: "center" });
+
+        // Save the PDF
+        doc.save('payment_receipt.pdf');
     });
+});
+
 </script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -852,7 +885,7 @@
     const bankTransferForm = document.getElementById('bankTransferForm');
     const paypalForm = document.getElementById('paypalForm'); // New form
 
-    // Show the credit card form only if "Credit Card" is selected
+    // Show credit card form only if "Credit Card" is selected
     creditCardOption.addEventListener('change', function () {
         if (creditCardOption.checked) {
             creditCardForm.style.display = 'block';
@@ -862,7 +895,7 @@
         }
     });
 
-    // Show the cash form only if "Cash" is selected
+    // Show cash form only if "Cash" is selected
     cashOption.addEventListener('change', function () {
         if (cashOption.checked) {
             cashForm.style.display = 'block';
@@ -872,7 +905,7 @@
         }
     });
 
-    // Show the bank transfer form only if "Bank Transfer" is selected
+    // Show bank transfer form only if "Bank Transfer" is selected
     bankTransferOption.addEventListener('change', function () {
         if (bankTransferOption.checked) {
             bankTransferForm.style.display = 'block';
@@ -882,7 +915,7 @@
         }
     });
 
-    // Show the PayPal form only if "PayPal" is selected
+    // Show PayPal form only if "PayPal" is selected
     paypalOption.addEventListener('change', function () {
         if (paypalOption.checked) {
             paypalForm.style.display = 'block';
@@ -892,40 +925,42 @@
         }
     });
 });
+
 </script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        const navLinks = document.querySelectorAll('nav a');
+    const navLinks = document.querySelectorAll('nav a');
 
-        navLinks.forEach(link => {
-            link.addEventListener('click', function (event) {
-                event.preventDefault(); // Evitar el comportamiento predeterminado del enlace
+    navLinks.forEach(link => {
+        link.addEventListener('click', function (event) {
+            event.preventDefault(); // Prevent the default link behavior
 
-                const targetId = this.getAttribute('href').substring(1);
-                const targetSection = document.getElementById(targetId);
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
 
-                if (targetSection) {
-                    targetSection.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-    });
-</script>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const header = document.querySelector('header');
-
-        window.addEventListener('scroll', function () {
-            if (window.scrollY > 50) {
-                header.classList.add('transparent'); // Reduce la opacidad al desplazarse
-            } else {
-                header.classList.remove('transparent'); // Restaura la opacidad al volver arriba
+            if (targetSection) {
+                targetSection.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
             }
         });
     });
+});
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const header = document.querySelector('header');
+
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 50) {
+            header.classList.add('transparent'); // Reduces opacity when scrolling
+        } else {
+            header.classList.remove('transparent'); // Restores opacity when scrolling back up
+        }
+    });
+});
+
 </script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -934,199 +969,222 @@
 
     cartIcons.forEach((icon, index) => {
         icon.addEventListener('click', function () {
-            // Incrementa el contador del carrito correspondiente
+            // Increases the corresponding cart counter
             const count = parseInt(cartCounts[index].textContent, 10);
             cartCounts[index].textContent = count + 1;
 
-            // Opcional: Mostrar un mensaje de confirmación
+            // Optional: Display a confirmation message
             alert('Product added to cart!');
         });
     });
 });
+
 </script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        const cartSidebar = document.getElementById('cart-sidebar');
-        const closeCartButton = document.getElementById('close-cart');
-        const cartIcons = document.querySelectorAll('.cart-icon');
-        const cartItemsList = document.getElementById('cart-items');
-        const cartSubtotal = document.getElementById('cart-subtotal');
-        const cartTotal = document.getElementById('cart-total');
+    const cartButton = document.getElementById('cart-button');
+    const cartSidebar = document.getElementById('cart-sidebar');
+    const closeCartButton = document.getElementById('close-cart');
+    const cartItemsList = document.getElementById('cart-items');
+    const cartSubtotal = document.getElementById('cart-subtotal');
+    const cartTotal = document.getElementById('cart-total');
+    const cartCount = document.getElementById('cart-count');
 
-        let cart = []; // Array to store cart products
+    let cart = []; // Array to store cart products
 
-        // Function to open the cart
-        function openCart() {
-            cartSidebar.classList.add('open');
-        }
+    // Function to open the cart
+    function openCart() {
+        cartSidebar.classList.add('open');
+    }
 
-        // Function to close the cart
-        function closeCart() {
-            cartSidebar.classList.remove('open');
-        }
+    // Function to close the cart
+    function closeCart() {
+        cartSidebar.classList.remove('open');
+    }
 
-        // Function to update the cart
-        function updateCart() {
-            cartItemsList.innerHTML = ''; // Clear the product list
-            let subtotal = 0;
+    // Function to update the cart
+    function updateCart() {
+        cartItemsList.innerHTML = ''; // Clears the product list
+        let subtotal = 0;
+        let totalProducts = 0;
 
-            cart.forEach(item => {
-                const li = document.createElement('li');
-                li.classList.add('d-flex', 'justify-content-between', 'align-items-center', 'mb-2');
-                li.innerHTML = `
+        cart.forEach(item => {
+            const li = document.createElement('li');
+            li.classList.add('d-flex', 'justify-content-between', 'align-items-center', 'mb-3');
+            li.innerHTML = `
+                <div class="d-flex align-items-center">
+                    <img src="${item.image}" alt="${item.name}" class="img-fluid rounded me-3" width="50">
                     <div>
                         <strong>${item.name}</strong>
-                        <p class="mb-0">${item.price} / ${item.quantity} pcs</p>
+                        <p class="mb-0">${item.quantity} x $${item.price.toFixed(2)}</p>
                     </div>
-                    <button class="btn btn-sm btn-danger remove-item" data-name="${item.name}">Remove</button>
-                `;
-                cartItemsList.appendChild(li);
-                subtotal += item.price * item.quantity;
-            });
-
-            cartSubtotal.textContent = `$${subtotal.toFixed(2)}`;
-            cartTotal.textContent = `$${subtotal.toFixed(2)}`;
-        }
-
-        // Event to open the cart when clicking on the icon
-        cartIcons.forEach(icon => {
-            icon.addEventListener('click', function () {
-                const productName = this.closest('.product-card').querySelector('h4').textContent;
-                const productPrice = parseFloat(
-                    this.closest('.product-card').querySelector('.fw-bold').textContent.replace('$', '')
-                );
-
-                // Check if the product is already in the cart
-                const existingProduct = cart.find(item => item.name === productName);
-                if (existingProduct) {
-                    existingProduct.quantity += 1;
-                } else {
-                    cart.push({ name: productName, price: productPrice, quantity: 1 });
-                }
-
-                updateCart();
-                openCart();
-            });
+                </div>
+                <button class="btn btn-sm btn-danger remove-item" data-name="${item.name}">Remove</button>
+            `;
+            cartItemsList.appendChild(li);
+            subtotal += item.price * item.quantity;
+            totalProducts += item.quantity;
         });
 
-        // Event to close the cart
-        closeCartButton.addEventListener('click', closeCart);
+        cartSubtotal.textContent = `$${subtotal.toFixed(2)}`;
+        cartTotal.textContent = `$${subtotal.toFixed(2)}`;
+        cartCount.textContent = totalProducts; // Updates the cart button counter
+    }
 
-        // Event to remove a product from the cart
-        cartItemsList.addEventListener('click', function (e) {
-            if (e.target.classList.contains('remove-item')) {
-                const productName = e.target.getAttribute('data-name');
-                cart = cart.filter(item => item.name !== productName);
-                updateCart();
+    // Event to open the cart when clicking the cart button
+    cartButton.addEventListener('click', openCart);
+
+    // Event to close the cart
+    closeCartButton.addEventListener('click', closeCart);
+
+    // Event to remove a product from the cart
+    cartItemsList.addEventListener('click', function (e) {
+        if (e.target.classList.contains('remove-item')) {
+            const productName = e.target.getAttribute('data-name');
+            cart = cart.filter(item => item.name !== productName);
+            updateCart();
+        }
+    });
+
+    // Event to add products to the cart
+    const cartIcons = document.querySelectorAll('.cart-icon');
+    cartIcons.forEach((icon, index) => {
+        icon.addEventListener('click', function () {
+            const productCard = this.closest('.product-card');
+            const productName = productCard.querySelector('h4').textContent;
+            const productPrice = parseFloat(productCard.querySelector('.fw-bold').textContent.replace('$', ''));
+            const productImage = productCard.querySelector('img').getAttribute('src');
+
+            // Checks if the product is already in the cart
+            const existingProduct = cart.find(item => item.name === productName);
+            if (existingProduct) {
+                existingProduct.quantity += 1;
+            } else {
+                cart.push({ name: productName, price: productPrice, quantity: 1, image: productImage });
             }
+
+            updateCart();
         });
     });
+});
+
 </script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        const cartIcons = document.querySelectorAll('.cart-icon');
-        const cartCounts = document.querySelectorAll('.cart-count');
-        const cartItemsList = document.getElementById('cart-items');
-        const cartSubtotal = document.getElementById('cart-subtotal');
-        const cartShipping = document.getElementById('cart-shipping');
-        const cartTotal = document.getElementById('cart-total');
-    
-        let cart = []; // Array to store cart products
-    
-        // Function to generate a random shipping cost based on the number of products
-        function generateShippingCost(productCount) {
-            if (productCount === 1) {
-                return Math.floor(Math.random() * (5 - 1 + 1)) + 1; // Generates a number between 1 and 5
-            } else if (productCount === 2) {
-                return Math.floor(Math.random() * (10 - 5 + 1)) + 5; // Generates a number between 5 and 10
-            }
-            return 0; // Free shipping for 3 or more products
+    const cartIcons = document.querySelectorAll('.cart-icon');
+    const cartCounts = document.querySelectorAll('.cart-count');
+    const cartItemsList = document.getElementById('cart-items');
+    const cartSubtotal = document.getElementById('cart-subtotal');
+    const cartShipping = document.getElementById('cart-shipping');
+    const cartTotal = document.getElementById('cart-total');
+
+    let cart = []; // Array to store cart products
+
+    // Function to generate a random shipping cost based on the number of products
+    function generateShippingCost(productQuantity) {
+        if (productQuantity === 1) {
+            return Math.floor(Math.random() * (5 - 1 + 1)) + 1; // Generates a number between 1 and 5
+        } else if (productQuantity === 2) {
+            return Math.floor(Math.random() * (10 - 5 + 1)) + 5; // Generates a number between 5 and 10
         }
-    
-        // Function to update the cart
-        function updateCart() {
-            cartItemsList.innerHTML = ''; // Clear the product list
-            let subtotal = 0;
-            let totalProducts = 0;
-    
-            cart.forEach(item => {
-                const li = document.createElement('li');
-                li.classList.add('d-flex', 'justify-content-between', 'align-items-center', 'mb-3');
-                li.innerHTML = `
-                    <div class="d-flex align-items-center">
-                        <img src="${item.image}" alt="${item.name}" class="img-fluid rounded me-3" width="50">
-                        <div>
-                            <strong>${item.name}</strong>
-                            <p class="mb-0">${item.quantity} x $${item.price.toFixed(2)}</p>
-                        </div>
+        return 0; // Free shipping for 3 or more products
+    }
+
+    // Function to update the cart
+    function updateCart() {
+        cartItemsList.innerHTML = ''; // Clear the product list
+        let subtotal = 0;
+        let totalProducts = 0;
+
+        cart.forEach(item => {
+            const li = document.createElement('li');
+            li.classList.add('d-flex', 'justify-content-between', 'align-items-center', 'mb-3');
+            li.innerHTML = `
+                <div class="d-flex align-items-center">
+                    <img src="${item.image}" alt="${item.name}" class="img-fluid rounded me-3" width="50">
+                    <div>
+                        <strong>${item.name}</strong>
+                        <p class="mb-0">${item.quantity} x $${item.price.toFixed(2)}</p>
                     </div>
-                    <button class="btn btn-sm btn-danger remove-item" data-name="${item.name}">Remove</button>
-                `;
-                cartItemsList.appendChild(li);
-                subtotal += item.price * item.quantity;
-                totalProducts += item.quantity;
-            });
-    
-            cartSubtotal.textContent = `$${subtotal.toFixed(2)}`;
-    
-            // Calculate the shipping cost based on the number of products
-            let shippingCost = 0;
-            if (totalProducts >= 3) {
-                cartShipping.textContent = 'FREE';
-            } else {
-                shippingCost = generateShippingCost(totalProducts);
-                cartShipping.textContent = `$${shippingCost.toFixed(2)}`;
-            }
-    
-            // Calculate the total
-            const total = subtotal + shippingCost;
-            cartTotal.textContent = `$${total.toFixed(2)}`;
-    
-            // Update the product counters on the cards
-            cartIcons.forEach((icon, index) => {
-                const productName = icon.closest('.product-card').querySelector('h4').textContent;
-                const productInCart = cart.find(item => item.name === productName);
-                cartCounts[index].textContent = productInCart ? productInCart.quantity : 0;
-            });
-        }
-    
-        // Event to add products to the cart
-        cartIcons.forEach((icon, index) => {
-            icon.addEventListener('click', function () {
-                const productCard = this.closest('.product-card');
-                const productName = productCard.querySelector('h4').textContent;
-                const productPrice = parseFloat(productCard.querySelector('.fw-bold').textContent.replace('$', ''));
-                const productImage = productCard.querySelector('img').getAttribute('src');
-    
-                // Check if the product is already in the cart
-                const existingProduct = cart.find(item => item.name === productName);
-                if (existingProduct) {
-                    existingProduct.quantity += 1;
-                } else {
-                    cart.push({ name: productName, price: productPrice, quantity: 1, image: productImage });
-                }
-    
-                updateCart();
-            });
+                </div>
+                <button class="btn btn-sm btn-danger remove-item" data-name="${item.name}">Remove</button>
+            `;
+            cartItemsList.appendChild(li);
+            subtotal += item.price * item.quantity;
+            totalProducts += item.quantity;
         });
-    
-        // Event to remove a product from the cart
-        cartItemsList.addEventListener('click', function (e) {
-            if (e.target.classList.contains('remove-item')) {
-                const productName = e.target.getAttribute('data-name');
-                const productIndex = cart.findIndex(item => item.name === productName);
-    
-                if (productIndex !== -1) {
-                    cart.splice(productIndex, 1); // Remove the product from the cart
-                }
-    
-                updateCart();
+
+        cartSubtotal.textContent = `$${subtotal.toFixed(2)}`;
+
+        // Calculate shipping cost based on the number of products
+        let shippingCost = 0;
+        if (totalProducts >= 3) {
+            cartShipping.textContent = 'FREE';
+        } else {
+            shippingCost = generateShippingCost(totalProducts);
+            cartShipping.textContent = `$${shippingCost.toFixed(2)}`;
+        }
+
+        // Calculate total
+        const total = subtotal + shippingCost;
+        cartTotal.textContent = `$${total.toFixed(2)}`;
+
+        // Update product counters in the cards
+        cartIcons.forEach((icon, index) => {
+            const productName = icon.closest('.product-card').querySelector('h4').textContent;
+            const productInCart = cart.find(item => item.name === productName);
+            cartCounts[index].textContent = productInCart ? productInCart.quantity : 0;
+        });
+    }
+
+    // Event to add products to the cart
+    cartIcons.forEach((icon, index) => {
+        icon.addEventListener('click', function () {
+            const productCard = this.closest('.product-card');
+            const productName = productCard.querySelector('h4').textContent;
+            const productPrice = parseFloat(productCard.querySelector('.fw-bold').textContent.replace('$', ''));
+            const productImage = productCard.querySelector('img').getAttribute('src');
+
+            // Check if the product is already in the cart
+            const existingProduct = cart.find(item => item.name === productName);
+            if (existingProduct) {
+                existingProduct.quantity += 1;
+            } else {
+                cart.push({ name: productName, price: productPrice, quantity: 1, image: productImage });
             }
+
+            updateCart();
         });
     });
-    </script>
 
-<!-- WhatsApp Floating Button -->
+    // Event to remove a product from the cart
+    cartItemsList.addEventListener('click', function (e) {
+        if (e.target.classList.contains('remove-item')) {
+            const productName = e.target.getAttribute('data-name');
+            const productIndex = cart.findIndex(item => item.name === productName);
+
+            if (productIndex !== -1) {
+                cart.splice(productIndex, 1); // Remove the product from the cart
+            }
+
+            updateCart();
+        }
+    });
+});
+
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const checkoutButton = document.getElementById('checkout');
+    const paymentTotal = document.getElementById('paymentTotal');
+    const cartTotal = document.getElementById('cart-total');
+
+    // Event to open the payment methods modal and update the total
+    checkoutButton.addEventListener('click', function () {
+        paymentTotal.textContent = cartTotal.textContent; // Update the total in the modal
+    });
+});
+</script>
 <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-float">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon">
 </a>

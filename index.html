@@ -21,14 +21,24 @@
             <a class="nav-link text-white" href="#fabricacion" id="nav-fabricacion">Fabricación</a>
             <a class="nav-link text-white" href="#equipo" id="nav-equipo">Equipo</a>
         </nav>
-        <div class="dropdown no-opacity">
-            <button id="language-toggle" class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Español
+        <div class="d-flex align-items-center">
+            <!-- Botón del carrito -->
+            <button id="cart-button" class="btn btn-light position-relative me-3">
+                <i class="bi bi-cart-fill"></i>
+                <span id="cart-count" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                    0
+                </span>
             </button>
-            <ul class="dropdown-menu dropdown-menu-end" data-bs-auto-close="false">
-                <li><a class="dropdown-item" href="indexen.html" id="switch-to-english">English</a></li>
-                <li><a class="dropdown-item" href="index.html" id="switch-to-spanish">Español</a></li>
-            </ul>
+            <!-- Selector de idioma -->
+            <div class="dropdown no-opacity">
+                <button id="language-toggle" class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Español
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end" data-bs-auto-close="false">
+                    <li><a class="dropdown-item" href="indexen.html" id="switch-to-english">English</a></li>
+                    <li><a class="dropdown-item" href="index.html" id="switch-to-spanish">Español</a></li>
+                </ul>
+            </div>
         </div>
     </div>
 </header>
@@ -219,9 +229,8 @@
                     <div class="product-card text-center p-4">
                         <img src="images/prod/01.jpg" alt="Electrolitos Esenciales" class="img-fluid mb-3">
                         <h4>Electrolitos Esenciales</h4>
-                        <p>Obtén <span class="text-success">ENVÍO GRATIS</span> si añades 2 bolsas más</p>
                         <div class="d-flex justify-content-between align-items-center">
-                            <button class="btn invisible-btn" data-bs-toggle="modal" data-bs-target="#paymentModal">Comprar ahora</button>
+                            <button class="btn invisible-btn buy-now-btn" data-price="47.50" data-bs-toggle="modal" data-bs-target="#paymentModal">Comprar ahora</button>
                             <div class="cart-container d-flex align-items-center">
                                 <i class="bi bi-cart-plus fs-4 text-dark me-2 cart-icon" role="button"></i>
                                 <span class="cart-count badge bg-primary">0</span>
@@ -236,9 +245,8 @@
                     <div class="product-card text-center p-4">
                         <img src="images/prod/02.jpg" alt="Supergreens" class="img-fluid mb-3">
                         <h4>Supergreens</h4>
-                        <p>Obtén <span class="text-success">ENVÍO GRATIS</span> si añades 2 bolsas más</p>
                         <div class="d-flex justify-content-between align-items-center">
-                            <button class="btn invisible-btn" data-bs-toggle="modal" data-bs-target="#paymentModal">Comprar ahora</button>
+                            <button class="btn invisible-btn buy-now-btn" data-price="30" data-bs-toggle="modal" data-bs-target="#paymentModal">Comprar ahora</button>
                             <div class="cart-container d-flex align-items-center">
                                 <i class="bi bi-cart-plus fs-4 text-dark me-2 cart-icon" role="button"></i>
                                 <span class="cart-count badge bg-primary">0</span>
@@ -254,9 +262,8 @@
                     <div class="product-card text-center p-4">
                         <img src="images/prod/03.jpg" alt="Proteína Whey" class="img-fluid mb-3">
                         <h4>Proteína Whey</h4>
-                        <p>Obtén <span class="text-success">ENVÍO GRATIS</span> si añades 2 bolsas más</p>
                         <div class="d-flex justify-content-between align-items-center">
-                            <button class="btn invisible-btn" data-bs-toggle="modal" data-bs-target="#paymentModal">Comprar ahora</button>
+                            <button class="btn invisible-btn buy-now-btn" data-price="35" data-bs-toggle="modal" data-bs-target="#paymentModal">Comprar ahora</button>
                             <div class="cart-container d-flex align-items-center">
                                 <i class="bi bi-cart-plus fs-4 text-dark me-2 cart-icon" role="button"></i>
                                 <span class="cart-count badge bg-primary">0</span>
@@ -272,9 +279,8 @@
                     <div class="product-card text-center p-4">
                         <img src="images/prod/04.jpg" alt="Rosehip Ylang" class="img-fluid mb-3">
                         <h4>Rosehip Ylang</h4>
-                        <p>Obtén <span class="text-success">ENVÍO GRATIS</span> si añades 2 bolsas más</p>
                         <div class="d-flex justify-content-between align-items-center">
-                            <button class="btn invisible-btn" data-bs-toggle="modal" data-bs-target="#paymentModal">Comprar ahora</button>
+                            <button class="btn invisible-btn buy-now-btn" data-price="39" data-bs-toggle="modal" data-bs-target="#paymentModal">Comprar ahora</button>
                             <div class="cart-container d-flex align-items-center">
                                 <i class="bi bi-cart-plus fs-4 text-dark me-2 cart-icon" role="button"></i>
                                 <span class="cart-count badge bg-primary">0</span>
@@ -628,8 +634,7 @@
                         <!-- Resumen del Pago -->
                         <div class="col-md-4">
                             <h6>Resumen del Pago</h6>
-                            <label for="paymentAmount" class="form-label">Monto:</label>
-                            <input type="number" id="paymentAmount" class="form-control mb-3" placeholder="Ingrese el monto" min="0" step="0.01">
+                            <p><strong>Total:</strong> <span id="paymentTotal">$0.00</span></p>
                             <button id="confirmPayment" class="btn btn-primary w-100">Confirmar Pago</button>
                         </div>
                     </div>
@@ -681,7 +686,7 @@
     </div>
     <div class="cart-footer">
         <button class="btn btn-primary w-100 mb-2" id="go-to-cart">Ir al Carrito</button>
-        <button class="btn btn-success w-100" id="checkout">Finalizar Compra</button>
+        <button class="btn btn-success w-100" id="checkout" data-bs-toggle="modal" data-bs-target="#paymentModal">Comprar Ahora</button>
     </div>
 </div>
     <!-- Bootstrap JS -->
@@ -750,7 +755,7 @@ document.addEventListener('DOMContentLoaded', function () {
         let name = '';
         let email = '';
         let documentNumber = '';
-        const amount = document.getElementById('paymentAmount').value;
+        const amount = document.getElementById('cart-total').textContent.replace('$', ''); // Total del carrito
 
         if (paymentMethod === 'Tarjeta de Crédito (Visa, MasterCard)') {
             name = document.getElementById('firstName').value + ' ' + document.getElementById('lastName').value;
@@ -797,76 +802,76 @@ document.addEventListener('DOMContentLoaded', function () {
 });
     </script>
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const botonDescargarBoleta = document.getElementById('downloadReceipt');
+document.addEventListener('DOMContentLoaded', function () {
+    const botonDescargarBoleta = document.getElementById('downloadReceipt');
 
-        botonDescargarBoleta.addEventListener('click', function () {
-            // Importar jsPDF
-            const { jsPDF } = window.jspdf;
-            const doc = new jsPDF();
+    botonDescargarBoleta.addEventListener('click', function () {
+        // Importar jsPDF
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF();
 
-            // Obtener los datos de la boleta
-            const metodoPago = document.getElementById('receiptPaymentMethod').textContent;
-            const monto = document.getElementById('receiptAmount').textContent;
-            const nombre = document.getElementById('receiptName').textContent;
-            const correo = document.getElementById('receiptEmail').textContent;
-            const numeroDocumento = document.getElementById('receiptDocument').textContent;
+        // Obtener los datos de la boleta
+        const metodoPago = document.getElementById('receiptPaymentMethod').textContent;
+        const monto = document.getElementById('receiptAmount').textContent;
+        const nombre = document.getElementById('receiptName').textContent;
+        const correo = document.getElementById('receiptEmail').textContent;
+        const numeroDocumento = document.getElementById('receiptDocument').textContent;
 
-            // Configurar encabezado
-            doc.setFontSize(18);
-            doc.setFont("helvetica", "bold");
-            doc.text("BOLETA DE PAGO", 105, 20, { align: "center" });
+        // Configurar encabezado
+        doc.setFontSize(18);
+        doc.setFont("helvetica", "bold");
+        doc.text("BOLETA DE PAGO", 105, 20, { align: "center" });
 
-            // Información de la empresa
-            doc.setFontSize(12);
-            doc.setFont("helvetica", "normal");
-            doc.text("Empresa: Kooyo S.A.", 10, 30);
-            doc.text("RUC: 12345678901", 10, 36);
-            doc.text("Dirección: Av. Siempre Viva 123, Lima, Perú", 10, 42);
+        // Información de la empresa
+        doc.setFontSize(12);
+        doc.setFont("helvetica", "normal");
+        doc.text("Empresa: Kooyo S.A.", 10, 30);
+        doc.text("RUC: 12345678901", 10, 36);
+        doc.text("Dirección: Av. Siempre Viva 123, Lima, Perú", 10, 42);
 
-            // Línea divisoria
-            doc.line(10, 45, 200, 45);
+        // Línea divisoria
+        doc.line(10, 45, 200, 45);
 
-            // Información del cliente
-            doc.setFont("helvetica", "bold");
-            doc.text("Detalles del Cliente", 10, 55);
-            doc.setFont("helvetica", "normal");
-            doc.text(`Nombre: ${nombre}`, 10, 65);
-            doc.text(`Correo Electrónico: ${correo}`, 10, 71);
-            doc.text(`Número de Documento: ${numeroDocumento}`, 10, 77);
+        // Información del cliente
+        doc.setFont("helvetica", "bold");
+        doc.text("Detalles del Cliente", 10, 55);
+        doc.setFont("helvetica", "normal");
+        doc.text(`Nombre: ${nombre}`, 10, 65);
+        doc.text(`Correo Electrónico: ${correo}`, 10, 71);
+        doc.text(`Número de Documento: ${numeroDocumento}`, 10, 77);
 
-            // Información del pago
-            doc.setFont("helvetica", "bold");
-            doc.text("Detalles del Pago", 10, 90);
-            doc.setFont("helvetica", "normal");
-            doc.text(`Método de Pago: ${metodoPago}`, 10, 100);
-            doc.text(`Monto: S/ ${monto}`, 10, 106);
+        // Información del pago
+        doc.setFont("helvetica", "bold");
+        doc.text("Detalles del Pago", 10, 90);
+        doc.setFont("helvetica", "normal");
+        doc.text(`Método de Pago: ${metodoPago}`, 10, 100);
+        doc.text(`Monto: $ ${monto}`, 10, 106); // Cambiado a dólares
 
-            // Tabla de resumen (opcional)
-            doc.setFont("helvetica", "bold");
-            doc.text("Resumen de Pago", 10, 120);
-            doc.setFont("helvetica", "normal");
-            doc.autoTable({
-                startY: 125,
-                head: [["Descripción", "Monto"]],
-                body: [
-                    ["Subtotal", `S/ ${monto}`],
-                    ["IGV (18%)", `S/ ${(monto * 0.18).toFixed(2)}`],
-                    ["Total", `S/ ${(monto * 1.18).toFixed(2)}`],
-                ],
-                theme: "grid",
-                styles: { fontSize: 10 },
-            });
-
-            // Pie de página
-            doc.setFontSize(10);
-            doc.text("Gracias por su compra.", 105, 280, { align: "center" });
-            doc.text("Kooyo S.A. - Todos los derechos reservados.", 105, 285, { align: "center" });
-
-            // Guardar el PDF
-            doc.save('boleta_pago.pdf');
+        // Tabla de resumen (opcional)
+        doc.setFont("helvetica", "bold");
+        doc.text("Resumen de Pago", 10, 120);
+        doc.setFont("helvetica", "normal");
+        doc.autoTable({
+            startY: 125,
+            head: [["Descripción", "Monto"]],
+            body: [
+                ["Subtotal", `$ ${monto}`],
+                ["Impuesto (18%)", `$ ${(monto * 0.18).toFixed(2)}`],
+                ["Total", `$ ${(monto * 1.18).toFixed(2)}`],
+            ],
+            theme: "grid",
+            styles: { fontSize: 10 },
         });
+
+        // Pie de página
+        doc.setFontSize(10);
+        doc.text("Gracias por su compra.", 105, 280, { align: "center" });
+        doc.text("Kooyo S.A. - Todos los derechos reservados.", 105, 285, { align: "center" });
+
+        // Guardar el PDF
+        doc.save('boleta_pago.pdf');
     });
+});
 </script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -973,13 +978,14 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 </script>
 <script>
-    document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {
+    const cartButton = document.getElementById('cart-button');
     const cartSidebar = document.getElementById('cart-sidebar');
     const closeCartButton = document.getElementById('close-cart');
-    const cartIcons = document.querySelectorAll('.cart-icon');
     const cartItemsList = document.getElementById('cart-items');
     const cartSubtotal = document.getElementById('cart-subtotal');
     const cartTotal = document.getElementById('cart-total');
+    const cartCount = document.getElementById('cart-count');
 
     let cart = []; // Array para almacenar los productos del carrito
 
@@ -997,45 +1003,33 @@ document.addEventListener('DOMContentLoaded', function () {
     function updateCart() {
         cartItemsList.innerHTML = ''; // Limpia la lista de productos
         let subtotal = 0;
+        let totalProductos = 0;
 
         cart.forEach(item => {
             const li = document.createElement('li');
-            li.classList.add('d-flex', 'justify-content-between', 'align-items-center', 'mb-2');
+            li.classList.add('d-flex', 'justify-content-between', 'align-items-center', 'mb-3');
             li.innerHTML = `
-                <div>
-                    <strong>${item.name}</strong>
-                    <p class="mb-0">${item.price} / ${item.quantity} pcs</p>
+                <div class="d-flex align-items-center">
+                    <img src="${item.image}" alt="${item.name}" class="img-fluid rounded me-3" width="50">
+                    <div>
+                        <strong>${item.name}</strong>
+                        <p class="mb-0">${item.quantity} x $${item.price.toFixed(2)}</p>
+                    </div>
                 </div>
-                <button class="btn btn-sm btn-danger remove-item" data-name="${item.name}">Remove</button>
+                <button class="btn btn-sm btn-danger remove-item" data-name="${item.name}">Eliminar</button>
             `;
             cartItemsList.appendChild(li);
             subtotal += item.price * item.quantity;
+            totalProductos += item.quantity;
         });
 
         cartSubtotal.textContent = `$${subtotal.toFixed(2)}`;
         cartTotal.textContent = `$${subtotal.toFixed(2)}`;
+        cartCount.textContent = totalProductos; // Actualiza el contador del botón del carrito
     }
 
-    // Evento para abrir el carrito al hacer clic en el ícono
-    cartIcons.forEach(icon => {
-        icon.addEventListener('click', function () {
-            const productName = this.closest('.product-card').querySelector('h4').textContent;
-            const productPrice = parseFloat(
-                this.closest('.product-card').querySelector('.fw-bold').textContent.replace('$', '')
-            );
-
-            // Verifica si el producto ya está en el carrito
-            const existingProduct = cart.find(item => item.name === productName);
-            if (existingProduct) {
-                existingProduct.quantity += 1;
-            } else {
-                cart.push({ name: productName, price: productPrice, quantity: 1 });
-            }
-
-            updateCart();
-            openCart();
-        });
-    });
+    // Evento para abrir el carrito al hacer clic en el botón del carrito
+    cartButton.addEventListener('click', openCart);
 
     // Evento para cerrar el carrito
     closeCartButton.addEventListener('click', closeCart);
@@ -1047,6 +1041,27 @@ document.addEventListener('DOMContentLoaded', function () {
             cart = cart.filter(item => item.name !== productName);
             updateCart();
         }
+    });
+
+    // Evento para añadir productos al carrito
+    const cartIcons = document.querySelectorAll('.cart-icon');
+    cartIcons.forEach((icon, index) => {
+        icon.addEventListener('click', function () {
+            const productCard = this.closest('.product-card');
+            const productName = productCard.querySelector('h4').textContent;
+            const productPrice = parseFloat(productCard.querySelector('.fw-bold').textContent.replace('$', ''));
+            const productImage = productCard.querySelector('img').getAttribute('src');
+
+            // Verifica si el producto ya está en el carrito
+            const existingProduct = cart.find(item => item.name === productName);
+            if (existingProduct) {
+                existingProduct.quantity += 1;
+            } else {
+                cart.push({ name: productName, price: productPrice, quantity: 1, image: productImage });
+            }
+
+            updateCart();
+        });
     });
 });
 </script>
@@ -1150,6 +1165,31 @@ document.addEventListener('DOMContentLoaded', function () {
 
             updateCart();
         }
+    });
+});
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const checkoutButton = document.getElementById('checkout');
+    const paymentTotal = document.getElementById('paymentTotal');
+    const cartTotal = document.getElementById('cart-total');
+
+    // Evento para abrir el modal de métodos de pago y actualizar el total
+    checkoutButton.addEventListener('click', function () {
+        paymentTotal.textContent = cartTotal.textContent; // Actualiza el total en el modal
+    });
+});
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const buyNowButtons = document.querySelectorAll('.buy-now-btn');
+    const paymentTotal = document.getElementById('paymentTotal'); // Campo del monto en el modal
+
+    buyNowButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const productPrice = this.getAttribute('data-price'); // Obtén el precio del producto
+            paymentTotal.textContent = `$${parseFloat(productPrice).toFixed(2)}`; // Actualiza el monto en el modal
+        });
     });
 });
 </script>
