@@ -10,22 +10,24 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<header class="bg-dark text-white py-3 position-relative">
+<header class="bg-dark text-white py-3">
     <div class="container d-flex justify-content-between align-items-center">
-        <h1 id="page-title" class="text-start mb-0 fw-bold">KOOYO</h1>
+        <h1 id="page-title" class="text-start mb-0 fw-bold no-opacity">
+            <img src="images/logo/01.png" alt="Kooyo Logo" class="img-fluid">
+        </h1>
         <nav class="nav justify-content-center">
-            <a class="nav-link text-white" href="#productos" id="nav-productos">Products</a>
-            <a class="nav-link text-white" href="#historia" id="nav-historia">History</a>
-            <a class="nav-link text-white" href="#fabricacion" id="nav-fabricacion">Manufacturing</a>
-            <a class="nav-link text-white" href="#equipo" id="nav-equipo">Team</a>
+            <a class="nav-link text-white" href="#products" id="nav-products">Products</a>
+            <a class="nav-link text-white" href="#history" id="nav-history">History</a>
+            <a class="nav-link text-white" href="#manufacturing" id="nav-manufacturing">Manufacturing</a>
+            <a class="nav-link text-white" href="#team" id="nav-team">Team</a>
         </nav>
-        <div class="dropdown">
+        <div class="dropdown no-opacity">
             <button id="language-toggle" class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                 English
             </button>
             <ul class="dropdown-menu dropdown-menu-end" data-bs-auto-close="false">
-                <li><a class="dropdown-item" href="indexen.html" id="switch-to-english">English</a></li>
                 <li><a class="dropdown-item" href="index.html" id="switch-to-spanish">Español</a></li>
+                <li><a class="dropdown-item" href="indexen.html" id="switch-to-english">English</a></li>
             </ul>
         </div>
     </div>
@@ -38,7 +40,7 @@
     </div>
 </section>
 
-<section id="productos" class="description py-5">
+<section id="products" class="description py-5">
     <div class="container">
         <div class="row align-items-center">
             <!-- Descriptive text -->
@@ -80,7 +82,7 @@
     </div>
 </section>
 
-<section id="historia" class="history py-5">
+<section id="history" class="history py-5">
     <div class="container">
         <h2 class="text-center mb-5">Our History</h2>
         <div class="row align-items-center">
@@ -102,7 +104,7 @@
     </div>
 </section>
 
-<section id="fabricacion" class="products py-5">
+<section id="manufacturing" class="products py-5">
     <div class="container">
         <div class="row g-4">
             <div class="col-md-4">
@@ -202,7 +204,7 @@
     </div>
 </section>
     
-<section id="equipo" class="more-products py-5">
+<section id="team" class="more-products py-5">
     <div class="container">
         <h2 class="text-center mb-5 text-white">Meet Our Team</h2>
         <p class="text-center text-light mb-5">
@@ -846,6 +848,40 @@
         }
     });
 });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const navLinks = document.querySelectorAll('nav a');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', function (event) {
+                event.preventDefault(); // Evitar el comportamiento predeterminado del enlace
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const header = document.querySelector('header');
+
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 50) {
+                header.classList.add('transparent'); // Reduce la opacidad al desplazarse
+            } else {
+                header.classList.remove('transparent'); // Restaura la opacidad al volver arriba
+            }
+        });
+    });
 </script>
 <!-- WhatsApp Floating Button -->
 <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-float">

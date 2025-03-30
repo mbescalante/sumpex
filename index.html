@@ -12,14 +12,16 @@
 </head>
 <header class="bg-dark text-white py-3">
     <div class="container d-flex justify-content-between align-items-center">
-        <h1 id="page-title" class="text-start mb-0 fw-bold">KOOYO</h1>
+        <h1 id="page-title" class="text-start mb-0 fw-bold no-opacity">
+            <img src="images/logo/01.png" alt="Kooyo Logo" class="img-fluid">
+        </h1>
         <nav class="nav justify-content-center">
             <a class="nav-link text-white" href="#productos" id="nav-productos">Productos</a>
             <a class="nav-link text-white" href="#historia" id="nav-historia">Historia</a>
             <a class="nav-link text-white" href="#fabricacion" id="nav-fabricacion">Fabricación</a>
             <a class="nav-link text-white" href="#equipo" id="nav-equipo">Equipo</a>
         </nav>
-        <div class="dropdown">
+        <div class="dropdown no-opacity">
             <button id="language-toggle" class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Español
             </button>
@@ -864,6 +866,19 @@
                     });
                 }
             });
+        });
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const header = document.querySelector('header');
+
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 50) {
+                header.classList.add('transparent'); // Reduce la opacidad al desplazarse
+            } else {
+                header.classList.remove('transparent'); // Restaura la opacidad al volver arriba
+            }
         });
     });
 </script>

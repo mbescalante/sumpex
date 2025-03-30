@@ -15,15 +15,29 @@ body {
     margin-top: 70px; /* Ajusta este valor según la altura del header */
 }
 
+#page-title img {
+    width: 120px; /* Ajusta el ancho del logo */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
 header {
     position: fixed; /* Hace que el header permanezca fijo en la parte superior */
-    top: 0; /* Fija el header en la parte superior de la ventana */
-    width: 100%; /* Asegura que el header ocupe todo el ancho de la página */
-    z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
-    background-color: #343a40; /* Fondo oscuro */
-    padding: 10px 20px; /* Espaciado interno */
-    border-bottom: 2px solid #ff7f00; /* Línea inferior de color naranja */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para destacar el header */
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(52, 58, 64, 0.8); /* Fondo oscuro con 80% de opacidad */
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, opacity 0.3s ease; /* Transición suave */
+}
+
+header.transparent {
+    opacity: 0.5; /* Reduce la opacidad al desplazarse */
+}
+
+header .no-opacity {
+    opacity: 1 !important; /* Mantiene la opacidad al 100% */
+    pointer-events: auto; /* Permite la interacción con estos elementos */
 }
 
 header:hover {
