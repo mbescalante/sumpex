@@ -221,8 +221,11 @@
                         <h4>Electrolitos Esenciales</h4>
                         <p>Obtén <span class="text-success">ENVÍO GRATIS</span> si añades 2 bolsas más</p>
                         <div class="d-flex justify-content-between align-items-center">
-                            <!-- Botón actualizado -->
                             <button class="btn invisible-btn" data-bs-toggle="modal" data-bs-target="#paymentModal">Comprar ahora</button>
+                            <div class="cart-container d-flex align-items-center">
+                                <i class="bi bi-cart-plus fs-4 text-dark me-2 cart-icon" role="button"></i>
+                                <span class="cart-count badge bg-primary">0</span>
+                            </div>
                             <span class="text-dark fw-bold">$47.50</span>
                         </div>
                     </div>
@@ -233,32 +236,43 @@
                         <h4>Supergreens</h4>
                         <p>Obtén <span class="text-success">ENVÍO GRATIS</span> si añades 2 bolsas más</p>
                         <div class="d-flex justify-content-between align-items-center">
-                            <!-- Botón actualizado -->
                             <button class="btn invisible-btn" data-bs-toggle="modal" data-bs-target="#paymentModal">Comprar ahora</button>
+                            <div class="cart-container d-flex align-items-center">
+                                <i class="bi bi-cart-plus fs-4 text-dark me-2 cart-icon" role="button"></i>
+                                <span class="cart-count badge bg-primary">0</span>
+                            </div>
                             <span class="text-dark fw-bold">$30</span>
                         </div>
                     </div>
                 </div>
+                
                 <div class="col-md-3">
                     <div class="product-card text-center p-4">
                         <img src="images/prod/03.jpg" alt="Proteína Whey" class="img-fluid mb-3">
                         <h4>Proteína Whey</h4>
                         <p>Obtén <span class="text-success">ENVÍO GRATIS</span> si añades 2 bolsas más</p>
                         <div class="d-flex justify-content-between align-items-center">
-                            <!-- Botón actualizado -->
                             <button class="btn invisible-btn" data-bs-toggle="modal" data-bs-target="#paymentModal">Comprar ahora</button>
+                            <div class="cart-container d-flex align-items-center">
+                                <i class="bi bi-cart-plus fs-4 text-dark me-2 cart-icon" role="button"></i>
+                                <span class="cart-count badge bg-primary">0</span>
+                            </div>
                             <span class="text-dark fw-bold">$35</span>
                         </div>
                     </div>
                 </div>
+                
                 <div class="col-md-3">
                     <div class="product-card text-center p-4">
                         <img src="images/prod/04.jpg" alt="Rosehip Ylang" class="img-fluid mb-3">
                         <h4>Rosehip Ylang</h4>
                         <p>Obtén <span class="text-success">ENVÍO GRATIS</span> si añades 2 bolsas más</p>
                         <div class="d-flex justify-content-between align-items-center">
-                            <!-- Botón actualizado -->
                             <button class="btn invisible-btn" data-bs-toggle="modal" data-bs-target="#paymentModal">Comprar ahora</button>
+                            <div class="cart-container d-flex align-items-center">
+                                <i class="bi bi-cart-plus fs-4 text-dark me-2 cart-icon" role="button"></i>
+                                <span class="cart-count badge bg-primary">0</span>
+                            </div>
                             <span class="text-dark fw-bold">$39</span>
                         </div>
                     </div>
@@ -879,6 +893,23 @@
             } else {
                 header.classList.remove('transparent'); // Restaura la opacidad al volver arriba
             }
+        });
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const cartIcons = document.querySelectorAll('.cart-icon');
+        const cartCounts = document.querySelectorAll('.cart-count');
+
+        cartIcons.forEach((icon, index) => {
+            icon.addEventListener('click', function () {
+                // Incrementa el contador del carrito correspondiente
+                const count = parseInt(cartCounts[index].textContent, 10);
+                cartCounts[index].textContent = count + 1;
+
+                // Opcional: Mostrar un mensaje de confirmación
+                alert('Producto añadido al carrito!');
+            });
         });
     });
 </script>

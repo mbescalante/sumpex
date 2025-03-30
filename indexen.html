@@ -218,6 +218,10 @@
                     <p>Get <span class="text-success">FREE SHIPPING</span> if you add 2 more bags</p>
                     <div class="d-flex justify-content-between align-items-center">
                         <button class="btn invisible-btn" data-bs-toggle="modal" data-bs-target="#paymentModal">Buy now</button>
+                        <div class="cart-container d-flex align-items-center">
+                            <i class="bi bi-cart-plus fs-4 text-dark me-2 cart-icon" role="button"></i>
+                            <span class="cart-count badge bg-primary">0</span>
+                        </div>
                         <span class="text-dark fw-bold">$47.50</span>
                     </div>
                 </div>
@@ -229,6 +233,10 @@
                     <p>Get <span class="text-success">FREE SHIPPING</span> if you add 2 more bags</p>
                     <div class="d-flex justify-content-between align-items-center">
                         <button class="btn invisible-btn" data-bs-toggle="modal" data-bs-target="#paymentModal">Buy now</button>
+                        <div class="cart-container d-flex align-items-center">
+                            <i class="bi bi-cart-plus fs-4 text-dark me-2 cart-icon" role="button"></i>
+                            <span class="cart-count badge bg-primary">0</span>
+                        </div>
                         <span class="text-dark fw-bold">$30</span>
                     </div>
                 </div>
@@ -240,6 +248,10 @@
                     <p>Get <span class="text-success">FREE SHIPPING</span> if you add 2 more bags</p>
                     <div class="d-flex justify-content-between align-items-center">
                         <button class="btn invisible-btn" data-bs-toggle="modal" data-bs-target="#paymentModal">Buy now</button>
+                        <div class="cart-container d-flex align-items-center">
+                            <i class="bi bi-cart-plus fs-4 text-dark me-2 cart-icon" role="button"></i>
+                            <span class="cart-count badge bg-primary">0</span>
+                        </div>
                         <span class="text-dark fw-bold">$35</span>
                     </div>
                 </div>
@@ -251,6 +263,10 @@
                     <p>Get <span class="text-success">FREE SHIPPING</span> if you add 2 more bags</p>
                     <div class="d-flex justify-content-between align-items-center">
                         <button class="btn invisible-btn" data-bs-toggle="modal" data-bs-target="#paymentModal">Buy now</button>
+                        <div class="cart-container d-flex align-items-center">
+                            <i class="bi bi-cart-plus fs-4 text-dark me-2 cart-icon" role="button"></i>
+                            <span class="cart-count badge bg-primary">0</span>
+                        </div>
                         <span class="text-dark fw-bold">$40</span>
                     </div>
                 </div>
@@ -883,6 +899,24 @@
         });
     });
 </script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    const cartIcons = document.querySelectorAll('.cart-icon');
+    const cartCounts = document.querySelectorAll('.cart-count');
+
+    cartIcons.forEach((icon, index) => {
+        icon.addEventListener('click', function () {
+            // Incrementa el contador del carrito correspondiente
+            const count = parseInt(cartCounts[index].textContent, 10);
+            cartCounts[index].textContent = count + 1;
+
+            // Opcional: Mostrar un mensaje de confirmación
+            alert('Product added to cart!');
+        });
+    });
+});
+</script>
+
 <!-- WhatsApp Floating Button -->
 <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-float">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon">
