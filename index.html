@@ -573,39 +573,50 @@
     </div>
 </div>
                     <!-- Formulario de Transferencia Bancaria -->
-<div id="bankTransferForm" class="mt-4" style="display: none;">
-    <h6>Detalles de Transferencia Bancaria</h6>
-    <div class="mb-3">
-        <label for="bankName" class="form-label">Nombre del Banco</label>
-        <input type="text" id="bankName" class="form-control" placeholder="Ingrese el nombre del banco">
-    </div>
-    <div class="mb-3">
-        <label for="accountNumber" class="form-label">Número de Cuenta</label>
-        <input type="text" id="accountNumber" class="form-control" placeholder="Ingrese el número de cuenta">
-    </div>
-    <div class="mb-3">
-        <label for="accountHolder" class="form-label">Nombre del Titular</label>
-        <input type="text" id="accountHolder" class="form-control" placeholder="Ingrese el nombre del titular">
-    </div>
-    <div class="row">
-        <div class="col-md-6 mb-3">
-            <label for="bankDocumentType" class="form-label">Tipo de Documento</label>
-            <select id="bankDocumentType" class="form-select">
-                <option value="dni">DNI</option>
-                <option value="passport">Pasaporte</option>
-                <option value="other">Otro</option>
-            </select>
-        </div>
-        <div class="col-md-6 mb-3">
-            <label for="bankDocumentNumber" class="form-label">Número de Documento</label>
-            <input type="text" id="bankDocumentNumber" class="form-control" placeholder="Ingrese el número de documento">
-        </div>
-    </div>
-    <div class="mb-3">
-        <label for="bankEmail" class="form-label">Correo Electrónico</label>
-        <input type="email" id="bankEmail" class="form-control" placeholder="Ingrese su correo electrónico">
-    </div>
-</div>
+                    <div id="bankTransferForm" class="mt-4" style="display: none;">
+                        <h6>Detalles de Transferencia Bancaria</h6>
+                        <div class="mb-3">
+                            <label for="bankName" class="form-label">Nombre del Banco</label>
+                            <select id="bankName" class="form-select">
+                                <option value="Banco de Crédito del Perú">Banco de Crédito del Perú</option>
+                                <option value="BBVA">BBVA</option>
+                                <option value="Interbank">Interbank</option>
+                                <option value="Scotiabank">Scotiabank</option>
+                                <option value="Banco Pichincha">Banco Pichincha</option>
+                                <option value="Banco Falabella">Banco Falabella</option>
+                                <option value="Banco Ripley">Banco Ripley</option>
+                                <option value="Banco GNB">Banco GNB</option>
+                                <option value="Banco Santander Perú">Banco Santander Perú</option>
+                                <option value="Banco de Comercio">Banco de Comercio</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label for="accountNumber" class="form-label">Número de Cuenta</label>
+                            <input type="text" id="accountNumber" class="form-control" placeholder="Ingrese el número de cuenta">
+                        </div>
+                        <div class="mb-3">
+                            <label for="accountHolder" class="form-label">Nombre del Titular</label>
+                            <input type="text" id="accountHolder" class="form-control" placeholder="Ingrese el nombre del titular">
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="bankDocumentType" class="form-label">Tipo de Documento</label>
+                                <select id="bankDocumentType" class="form-select">
+                                    <option value="dni">DNI</option>
+                                    <option value="passport">Pasaporte</option>
+                                    <option value="other">Otro</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="bankDocumentNumber" class="form-label">Número de Documento</label>
+                                <input type="text" id="bankDocumentNumber" class="form-control" placeholder="Ingrese el número de documento">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="bankEmail" class="form-label">Correo Electrónico</label>
+                            <input type="email" id="bankEmail" class="form-control" placeholder="Ingrese su correo electrónico">
+                        </div>
+                    </div>
 <!-- Formulario de PayPal -->
 <div id="paypalForm" class="mt-4" style="display: none;">
     <h6>Detalles de PayPal</h6>
@@ -719,52 +730,71 @@
         });
     </script>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            const confirmPaymentButton = document.getElementById('confirmPayment');
-    
-            confirmPaymentButton.addEventListener('click', function () {
-                // Obtener el método de pago seleccionado
-                let paymentMethod = '';
-                if (document.getElementById('creditCard').checked) {
-                    paymentMethod = 'Tarjeta de Crédito';
-                } else if (document.getElementById('cash').checked) {
-                    paymentMethod = 'Efectivo';
-                } else if (document.getElementById('bankTransfer').checked) {
-                    paymentMethod = 'Transferencia Bancaria';
-                }
-    
-                // Obtener los datos del formulario según el método de pago
-                let name = '';
-                let email = '';
-                let documentNumber = '';
-                const amount = document.getElementById('paymentAmount').value;
-    
-                if (paymentMethod === 'Tarjeta de Crédito') {
-                    name = document.getElementById('firstName').value + ' ' + document.getElementById('lastName').value;
-                    email = document.getElementById('email').value;
-                    documentNumber = document.getElementById('documentNumber').value;
-                } else if (paymentMethod === 'Efectivo') {
-                    name = document.getElementById('cashFirstName').value + ' ' + document.getElementById('cashLastName').value;
-                    email = document.getElementById('cashEmail').value;
-                    documentNumber = document.getElementById('cashDocumentNumber').value;
-                } else if (paymentMethod === 'Transferencia Bancaria') {
-                    name = document.getElementById('accountHolder').value;
-                    email = document.getElementById('bankEmail').value;
-                    documentNumber = document.getElementById('bankDocumentNumber').value;
-                }
-    
-                // Mostrar los datos en el modal de la boleta
-                document.getElementById('receiptPaymentMethod').textContent = paymentMethod;
-                document.getElementById('receiptAmount').textContent = amount;
-                document.getElementById('receiptName').textContent = name;
-                document.getElementById('receiptEmail').textContent = email;
-                document.getElementById('receiptDocument').textContent = documentNumber;
-    
-                // Mostrar el modal de la boleta
-                const receiptModal = new bootstrap.Modal(document.getElementById('receiptModal'));
-                receiptModal.show();
-            });
-        });
+document.addEventListener('DOMContentLoaded', function () {
+    const confirmPaymentButton = document.getElementById('confirmPayment');
+
+    confirmPaymentButton.addEventListener('click', function () {
+        // Obtener el método de pago seleccionado
+        let paymentMethod = '';
+        if (document.getElementById('creditCard').checked) {
+            paymentMethod = 'Tarjeta de Crédito (Visa, MasterCard)';
+        } else if (document.getElementById('cash').checked) {
+            paymentMethod = 'Efectivo (BCP)';
+        } else if (document.getElementById('bankTransfer').checked) {
+            paymentMethod = 'Transferencia Bancaria';
+        } else if (document.getElementById('paypal').checked) {
+            paymentMethod = 'PayPal';
+        }
+
+        // Obtener los datos del formulario según el método de pago
+        let name = '';
+        let email = '';
+        let documentNumber = '';
+        const amount = document.getElementById('paymentAmount').value;
+
+        if (paymentMethod === 'Tarjeta de Crédito (Visa, MasterCard)') {
+            name = document.getElementById('firstName').value + ' ' + document.getElementById('lastName').value;
+            documentNumber = document.getElementById('documentNumber').value;
+            // No incluir correo electrónico ni número de tarjeta
+        } else if (paymentMethod === 'Efectivo (BCP)') {
+            name = document.getElementById('cashFirstName').value + ' ' + document.getElementById('cashLastName').value;
+            email = document.getElementById('cashEmail').value;
+            documentNumber = document.getElementById('cashDocumentNumber').value;
+        } else if (paymentMethod === 'Transferencia Bancaria') {
+            name = document.getElementById('accountHolder').value;
+            documentNumber = document.getElementById('bankDocumentNumber').value;
+            // No incluir correo electrónico
+        } else if (paymentMethod === 'PayPal') {
+            email = document.getElementById('paypalEmail').value;
+            // Solo mostrar el correo electrónico
+        }
+
+        // Mostrar los datos en el modal de la boleta
+        document.getElementById('receiptPaymentMethod').textContent = paymentMethod;
+        document.getElementById('receiptAmount').textContent = amount;
+
+        // Mostrar los datos según el método de pago
+        if (paymentMethod === 'PayPal') {
+            document.getElementById('receiptName').parentElement.style.display = 'none';
+            document.getElementById('receiptDocument').parentElement.style.display = 'none';
+            document.getElementById('receiptEmail').textContent = email;
+            document.getElementById('receiptEmail').parentElement.style.display = 'block';
+        } else {
+            document.getElementById('receiptName').textContent = name;
+            document.getElementById('receiptDocument').textContent = documentNumber;
+            document.getElementById('receiptEmail').textContent = email;
+
+            // Mostrar u ocultar campos según el método de pago
+            document.getElementById('receiptName').parentElement.style.display = name ? 'block' : 'none';
+            document.getElementById('receiptDocument').parentElement.style.display = documentNumber ? 'block' : 'none';
+            document.getElementById('receiptEmail').parentElement.style.display = email ? 'block' : 'none';
+        }
+
+        // Mostrar el modal de la boleta
+        const receiptModal = new bootstrap.Modal(document.getElementById('receiptModal'));
+        receiptModal.show();
+    });
+});
     </script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
