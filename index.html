@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<header class="bg-dark text-white py-3 position-relative">
+<header class="bg-dark text-white py-3">
     <div class="container d-flex justify-content-between align-items-center">
         <h1 id="page-title" class="text-start mb-0 fw-bold">KOOYO</h1>
         <nav class="nav justify-content-center">
@@ -845,6 +845,27 @@
         }
     });
 });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const navLinks = document.querySelectorAll('nav a');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', function (event) {
+                event.preventDefault(); // Evitar el comportamiento predeterminado del enlace
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetSection = document.getElementById(targetId);
+
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    });
 </script>
 <a href="https://wa.me/1234567890" target="_blank" class="whatsapp-float">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon">

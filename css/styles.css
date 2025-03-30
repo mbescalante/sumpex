@@ -12,15 +12,23 @@ body {
     background-color: #f9f9f9;
     margin: 0;
     padding: 0;
+    margin-top: 70px; /* Ajusta este valor según la altura del header */
 }
 
 header {
-    background-color: #fff;
-    padding: 20px 40px;
-    border-bottom: 1px solid #ddd;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: fixed; /* Hace que el header permanezca fijo en la parte superior */
+    top: 0; /* Fija el header en la parte superior de la ventana */
+    width: 100%; /* Asegura que el header ocupe todo el ancho de la página */
+    z-index: 1000; /* Asegura que el header esté por encima de otros elementos */
+    background-color: #343a40; /* Fondo oscuro */
+    padding: 10px 20px; /* Espaciado interno */
+    border-bottom: 2px solid #ff7f00; /* Línea inferior de color naranja */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra para destacar el header */
+}
+
+header:hover {
+    background-color: #f8f9fa; /* Cambia ligeramente el color al pasar el cursor */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
 }
 
 header h1 {
