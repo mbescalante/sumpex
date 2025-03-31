@@ -230,7 +230,6 @@
                         <img src="images/prod/01.jpg" alt="Electrolitos Esenciales" class="img-fluid mb-3">
                         <h4>Electrolitos Esenciales</h4>
                         <div class="d-flex justify-content-between align-items-center">
-                            <button class="btn invisible-btn buy-now-btn" data-price="47.50" data-bs-toggle="modal" data-bs-target="#paymentModal">Comprar ahora</button>
                             <div class="cart-container d-flex align-items-center">
                                 <i class="bi bi-cart-plus fs-4 text-dark me-2 cart-icon" role="button"></i>
                                 <span class="cart-count badge bg-primary">0</span>
@@ -246,7 +245,6 @@
                         <img src="images/prod/02.jpg" alt="Supergreens" class="img-fluid mb-3">
                         <h4>Supergreens</h4>
                         <div class="d-flex justify-content-between align-items-center">
-                            <button class="btn invisible-btn buy-now-btn" data-price="30" data-bs-toggle="modal" data-bs-target="#paymentModal">Comprar ahora</button>
                             <div class="cart-container d-flex align-items-center">
                                 <i class="bi bi-cart-plus fs-4 text-dark me-2 cart-icon" role="button"></i>
                                 <span class="cart-count badge bg-primary">0</span>
@@ -263,7 +261,6 @@
                         <img src="images/prod/03.jpg" alt="Proteína Whey" class="img-fluid mb-3">
                         <h4>Proteína Whey</h4>
                         <div class="d-flex justify-content-between align-items-center">
-                            <button class="btn invisible-btn buy-now-btn" data-price="35" data-bs-toggle="modal" data-bs-target="#paymentModal">Comprar ahora</button>
                             <div class="cart-container d-flex align-items-center">
                                 <i class="bi bi-cart-plus fs-4 text-dark me-2 cart-icon" role="button"></i>
                                 <span class="cart-count badge bg-primary">0</span>
@@ -280,7 +277,6 @@
                         <img src="images/prod/04.jpg" alt="Rosehip Ylang" class="img-fluid mb-3">
                         <h4>Rosehip Ylang</h4>
                         <div class="d-flex justify-content-between align-items-center">
-                            <button class="btn invisible-btn buy-now-btn" data-price="39" data-bs-toggle="modal" data-bs-target="#paymentModal">Comprar ahora</button>
                             <div class="cart-container d-flex align-items-center">
                                 <i class="bi bi-cart-plus fs-4 text-dark me-2 cart-icon" role="button"></i>
                                 <span class="cart-count badge bg-primary">0</span>
@@ -1177,19 +1173,6 @@ document.addEventListener('DOMContentLoaded', function () {
     // Evento para abrir el modal de métodos de pago y actualizar el total
     checkoutButton.addEventListener('click', function () {
         paymentTotal.textContent = cartTotal.textContent; // Actualiza el total en el modal
-    });
-});
-</script>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-    const buyNowButtons = document.querySelectorAll('.buy-now-btn');
-    const paymentTotal = document.getElementById('paymentTotal'); // Campo del monto en el modal
-
-    buyNowButtons.forEach(button => {
-        button.addEventListener('click', function () {
-            const productPrice = this.getAttribute('data-price'); // Obtén el precio del producto
-            paymentTotal.textContent = `$${parseFloat(productPrice).toFixed(2)}`; // Actualiza el monto en el modal
-        });
     });
 });
 </script>
