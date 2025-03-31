@@ -8,7 +8,7 @@ Este es un proyecto web para la marca **Kooyo**, que ofrece suplementos diseñad
 
 El proyecto está organizado de la siguiente manera:
 
-
+Puedes visitar la página en vivo aquí: [Kooyo - The One](https://mbescalante.github.io/sumpex/)
 
 ---
 
