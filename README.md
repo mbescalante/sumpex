@@ -9,6 +9,7 @@ Este es un proyecto web para la marca **Kooyo**, que ofrece suplementos diseñad
 El proyecto está organizado de la siguiente manera:
 
 
+
 ---
 
 ## Tecnologías Utilizadas
@@ -41,6 +42,7 @@ El sitio está optimizado para verse correctamente en dispositivos móviles, tab
 3. **Productos**:
    - Una sección dedicada a mostrar los productos destacados con imágenes, descripciones y precios.
    - Incluye un diseño limpio y organizado con tarjetas de productos.
+   - **Nuevo**: Los productos ahora tienen un botón de carrito funcional que permite agregar productos al carrito dinámico.
 
 4. **Historia**:
    - Una sección que describe la historia de la marca y su misión.
@@ -62,6 +64,24 @@ El sitio está optimizado para verse correctamente en dispositivos móviles, tab
 9. **Pie de Página**:
    - Contiene enlaces a las redes sociales, un menú adicional y categorías clave.
    - Incluye información de derechos de autor.
+
+---
+
+## Sistema de Carrito de Compras
+
+### Funcionalidades del Carrito
+- **Agregar Productos**:
+  - Los usuarios pueden agregar productos al carrito haciendo clic en el ícono del carrito en cada tarjeta de producto.
+- **Eliminar Productos**:
+  - Los usuarios pueden eliminar productos del carrito desde el carrito lateral.
+- **Cálculo Dinámico**:
+  - El subtotal, el costo de envío y el total se calculan automáticamente en función de los productos en el carrito.
+- **Costo de Envío**:
+  - Envío gratuito para pedidos de 3 o más productos; de lo contrario, el costo de envío es de $5.
+
+### Carrito Lateral
+- El carrito se abre como un panel lateral al hacer clic en el botón del carrito en el encabezado.
+- Incluye una lista de productos, un resumen del pedido y botones para proceder al pago o ver más detalles.
 
 ---
 
@@ -94,6 +114,7 @@ El sitio está optimizado para verse correctamente en dispositivos móviles, tab
 
 ## Mejoras Implementadas
 
+- **Carrito Dinámico**: Se agregó un carrito lateral funcional con cálculo automático de totales.
 - **Fondo con Degradado**: Se utilizó un degradado para mejorar la estética de la sección `hero`.
 - **Hover Interactivo**: Se añadieron efectos de hover en botones y estadísticas para mejorar la experiencia del usuario.
 - **Carrusel de Testimonios**: Se implementó un carrusel para mostrar múltiples testimonios de manera dinámica.
@@ -103,23 +124,17 @@ El sitio está optimizado para verse correctamente en dispositivos móviles, tab
 
 ---
 
+
+### Cambios Agregados:
+1. **Carrito Dinámico**: Se incluyó una descripción detallada del carrito lateral y sus funcionalidades.
+2. **Sistema de Pago**: Se añadieron detalles sobre el modal de pago y la generación de boletas en PDF.
+3. **Mejoras Implementadas**: Se listaron las nuevas características y mejoras visuales.
+4. **Futuras Mejoras**: Se incluyeron ideas para expandir el proyecto.
+
+Guarda este contenido en tu archivo [README.md](http://_vscodecontentref_/4) para reflejar las actualizaciones más recientes de tu proyecto.
+
 ## Cómo Ejecutar el Proyecto
 
 1. Clona este repositorio en tu máquina local:
    ```bash
    git clone https://github.com/mbescalante/sumpex.git
-
----
-
-### Explicación:
-1. **Estructura Completa**:
-   - Incluye todas las secciones del proyecto, desde el diseño hasta el sistema de pago y la generación de PDFs.
-
-2. **Instrucciones Claras**:
-   - Explica cómo ejecutar el proyecto y probar las funcionalidades.
-
-3. **Futuras Mejoras**:
-   - Detalla posibles mejoras para el proyecto.
-
-4. **Dependencias**:
-   - Lista todas las bibliotecas y herramientas utilizadas.
