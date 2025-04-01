@@ -30,15 +30,6 @@
                 </span>
             </button>
             <!-- Selector de idioma -->
-            <div class="dropdown no-opacity">
-                <button id="language-toggle" class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Español
-                </button>
-                <ul class="dropdown-menu dropdown-menu-end" data-bs-auto-close="false">
-                    <li><a class="dropdown-item" href="indexen.html" id="switch-to-english">English</a></li>
-                    <li><a class="dropdown-item" href="index.html" id="switch-to-spanish">Español</a></li>
-                </ul>
-            </div>
         </div>
     </div>
 </header>
@@ -574,71 +565,71 @@
         <input type="email" id="cashEmail" class="form-control" placeholder="Ingrese su correo electrónico">
     </div>
 </div>
-                    <!-- Formulario de Transferencia Bancaria -->
-                    <div id="bankTransferForm" class="mt-4" style="display: none;">
-                        <h6>Detalles de Transferencia Bancaria</h6>
-                        <div class="mb-3">
-                            <label for="bankName" class="form-label">Nombre del Banco</label>
-                            <select id="bankName" class="form-select">
-                                <option value="Banco de Crédito del Perú">Banco de Crédito del Perú</option>
-                                <option value="BBVA">BBVA</option>
-                                <option value="Interbank">Interbank</option>
-                                <option value="Scotiabank">Scotiabank</option>
-                                <option value="Banco Pichincha">Banco Pichincha</option>
-                                <option value="Banco Falabella">Banco Falabella</option>
-                                <option value="Banco Ripley">Banco Ripley</option>
-                                <option value="Banco GNB">Banco GNB</option>
-                                <option value="Banco Santander Perú">Banco Santander Perú</option>
-                                <option value="Banco de Comercio">Banco de Comercio</option>
-                            </select>
-                        </div>
-                        <div class="mb-3">
-                            <label for="accountNumber" class="form-label">Número de Cuenta</label>
-                            <input type="text" id="accountNumber" class="form-control" placeholder="Ingrese el número de cuenta">
-                        </div>
-                        <div class="mb-3">
-                            <label for="accountHolder" class="form-label">Nombre del Titular</label>
-                            <input type="text" id="accountHolder" class="form-control" placeholder="Ingrese el nombre del titular">
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <label for="bankDocumentType" class="form-label">Tipo de Documento</label>
-                                <select id="bankDocumentType" class="form-select">
-                                    <option value="dni">DNI</option>
-                                    <option value="passport">Pasaporte</option>
-                                    <option value="other">Otro</option>
+                        <!-- Formulario de Transferencia Bancaria -->
+                        <div id="bankTransferForm" class="mt-4" style="display: none;">
+                            <h6>Detalles de Transferencia Bancaria</h6>
+                            <div class="mb-3">
+                                <label for="bankName" class="form-label">Nombre del Banco</label>
+                                <select id="bankName" class="form-select">
+                                    <option value="Banco de Crédito del Perú">Banco de Crédito del Perú</option>
+                                    <option value="BBVA">BBVA</option>
+                                    <option value="Interbank">Interbank</option>
+                                    <option value="Scotiabank">Scotiabank</option>
+                                    <option value="Banco Pichincha">Banco Pichincha</option>
+                                    <option value="Banco Falabella">Banco Falabella</option>
+                                    <option value="Banco Ripley">Banco Ripley</option>
+                                    <option value="Banco GNB">Banco GNB</option>
+                                    <option value="Banco Santander Perú">Banco Santander Perú</option>
+                                    <option value="Banco de Comercio">Banco de Comercio</option>
                                 </select>
                             </div>
-                            <div class="col-md-6 mb-3">
-                                <label for="bankDocumentNumber" class="form-label">Número de Documento</label>
-                                <input type="text" id="bankDocumentNumber" class="form-control" placeholder="Ingrese el número de documento">
+                            <div class="mb-3">
+                                <label for="accountNumber" class="form-label">Número de Cuenta</label>
+                                <input type="text" id="accountNumber" class="form-control" placeholder="Ingrese el número de cuenta">
+                            </div>
+                            <div class="mb-3">
+                                <label for="accountHolder" class="form-label">Nombre del Titular</label>
+                                <input type="text" id="accountHolder" class="form-control" placeholder="Ingrese el nombre del titular">
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="bankDocumentType" class="form-label">Tipo de Documento</label>
+                                    <select id="bankDocumentType" class="form-select">
+                                        <option value="dni">DNI</option>
+                                        <option value="passport">Pasaporte</option>
+                                        <option value="other">Otro</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="bankDocumentNumber" class="form-label">Número de Documento</label>
+                                    <input type="text" id="bankDocumentNumber" class="form-control" placeholder="Ingrese el número de documento">
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="bankEmail" class="form-label">Correo Electrónico</label>
+                                <input type="email" id="bankEmail" class="form-control" placeholder="Ingrese su correo electrónico">
                             </div>
                         </div>
-                        <div class="mb-3">
-                            <label for="bankEmail" class="form-label">Correo Electrónico</label>
-                            <input type="email" id="bankEmail" class="form-control" placeholder="Ingrese su correo electrónico">
-                        </div>
-                    </div>
-<!-- Formulario de PayPal -->
-<div id="paypalForm" class="mt-4" style="display: none;">
-    <h6>Detalles de PayPal</h6>
-    <div class="mb-3">
-        <label for="paypalEmail" class="form-label">Correo Electrónico de PayPal</label>
-        <input type="email" id="paypalEmail" class="form-control" placeholder="Ingrese su correo de PayPal">
+    <!-- Formulario de PayPal -->
+    <div id="paypalForm" class="mt-4" style="display: none;">
+        <h6>Detalles de PayPal</h6>
+        <div class="mb-3">
+            <label for="paypalEmail" class="form-label">Correo Electrónico de PayPal</label>
+            <input type="email" id="paypalEmail" class="form-control" placeholder="Ingrese su correo de PayPal">
+        </div>
     </div>
-</div>
-                        <!-- Resumen del Pago -->
-                        <div class="col-md-4">
-                            <h6>Resumen del Pago</h6>
-                            <p><strong>Total:</strong> <span id="paymentTotal">$0.00</span></p>
-                            <button id="confirmPayment" class="btn btn-primary w-100">Confirmar Pago</button>
+                            <!-- Resumen del Pago -->
+                            <div class="col-md-4">
+                                <h6>Resumen del Pago</h6>
+                                <p><strong>Total:</strong> <span id="paymentTotal">$0.00</span></p>
+                                <button id="confirmPayment" class="btn btn-primary w-100">Confirmar Pago</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
 <!-- Modal para la boleta -->
 <div class="modal fade" id="receiptModal" tabindex="-1" aria-labelledby="receiptModalLabel" aria-hidden="true">
@@ -682,7 +673,11 @@
     </div>
     <div class="cart-footer">
         <button class="btn btn-primary w-100 mb-2" id="go-to-cart">Ir al Carrito</button>
-        <button class="btn btn-success w-100" id="checkout" data-bs-toggle="modal" data-bs-target="#paymentModal">Comprar Ahora</button>
+        <button class="btn btn-success w-100 mb-2" id="checkout" data-bs-toggle="modal" data-bs-target="#paymentModal">Comprar Ahora</button>
+        <!-- Botón de WhatsApp -->
+        <a id="whatsapp-order" href="#" target="_blank">
+            Realiza tu pedido por WhatsApp
+        </a>
     </div>
 </div>
     <!-- Bootstrap JS -->
@@ -1166,6 +1161,103 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 <script>
     document.addEventListener('DOMContentLoaded', function () {
+    const whatsappButton = document.getElementById('whatsapp-order');
+    const cartItemsList = document.getElementById('cart-items');
+    const cartSubtotal = document.getElementById('cart-subtotal');
+    const cartTotal = document.getElementById('cart-total');
+
+    let cart = []; // Array para almacenar los productos del carrito
+
+    // Función para actualizar el carrito
+    function updateCart() {
+        cartItemsList.innerHTML = ''; // Limpia la lista de productos
+        let subtotal = 0;
+        let totalProductos = 0;
+
+        cart.forEach(item => {
+            const li = document.createElement('li');
+            li.classList.add('d-flex', 'justify-content-between', 'align-items-center', 'mb-3');
+            li.innerHTML = `
+                <div class="d-flex align-items-center">
+                    <img src="${item.image}" alt="${item.name}" class="img-fluid rounded me-3" width="50">
+                    <div>
+                        <strong>${item.name}</strong>
+                        <p class="mb-0">${item.quantity} x $${item.price.toFixed(2)}</p>
+                    </div>
+                </div>
+                <button class="btn btn-sm btn-danger remove-item" data-name="${item.name}">Eliminar</button>
+            `;
+            cartItemsList.appendChild(li);
+            subtotal += item.price * item.quantity;
+            totalProductos += item.quantity;
+        });
+
+        cartSubtotal.textContent = `$${subtotal.toFixed(2)}`;
+
+        // Actualiza el total
+        const total = subtotal;
+        cartTotal.textContent = `$${total.toFixed(2)}`;
+
+        // Actualiza el enlace de WhatsApp
+        updateWhatsAppLink();
+    }
+
+    // Función para actualizar el enlace de WhatsApp con los productos seleccionados y el precio total
+    function updateWhatsAppLink() {
+        let message = "Hola, quiero hacer un pedido con los siguientes productos:\n\n";
+        cart.forEach(item => {
+            message += `- ${item.name} (${item.quantity} x $${item.price.toFixed(2)})\n`;
+        });
+        message += `\nTotal: ${cartTotal.textContent}`;
+
+        const whatsappNumber = "51923660474"; // Número sin el signo "+"
+        const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
+        whatsappButton.setAttribute('href', whatsappLink);
+    }
+
+    // Evento para eliminar un producto del carrito
+    cartItemsList.addEventListener('click', function (e) {
+        if (e.target.classList.contains('remove-item')) {
+            const productName = e.target.getAttribute('data-name');
+            const productIndex = cart.findIndex(item => item.name === productName);
+
+            if (productIndex !== -1) {
+                cart.splice(productIndex, 1); // Elimina el producto del carrito
+            }
+
+            updateCart();
+        }
+    });
+
+    // Evento para añadir productos al carrito
+    const cartIcons = document.querySelectorAll('.cart-icon');
+    cartIcons.forEach((icon, index) => {
+        icon.addEventListener('click', function () {
+            const productCard = this.closest('.product-card');
+            const productName = productCard.querySelector('h4').textContent;
+            const productPrice = parseFloat(productCard.querySelector('.fw-bold').textContent.replace('$', ''));
+            const productImage = productCard.querySelector('img').getAttribute('src');
+
+            // Verifica si el producto ya está en el carrito
+            const existingProduct = cart.find(item => item.name === productName);
+            if (existingProduct) {
+                existingProduct.quantity += 1;
+            } else {
+                cart.push({ name: productName, price: productPrice, quantity: 1, image: productImage });
+            }
+
+            updateCart();
+        });
+    });
+
+    // Actualizar el carrito al cargar la página
+    updateCart();
+});
+
+</script>
+    
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
     const checkoutButton = document.getElementById('checkout');
     const paymentTotal = document.getElementById('paymentTotal');
     const cartTotal = document.getElementById('cart-total');
@@ -1176,8 +1268,5 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 </script>
-<a href="https://wa.me/1234567890" target="_blank" class="whatsapp-float">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" class="whatsapp-icon">
-</a>
 </body>
 </html>
