@@ -3,18 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kooyo</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>CodeVault Pro</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://www.paypal.com/sdk/js?client-id=AaimJ-RxVYVSzmezvGfrmsvSwfxqhn8x-qxtS7tbfVPh171UDMlHjUb-SrAVG-TZ7C3-TYfEhVOCQQgv&currency=USD&components=buttons"></script>
 </head>
 <header class="bg-dark text-white py-3">
     <div class="container d-flex justify-content-between align-items-center">
-        <h1 id="page-title" class="text-start mb-0 fw-bold no-opacity">
-            <img src="images/logo/01.png" alt="Kooyo Logo" class="img-fluid">
+        <h1 id="page-title" class="text-start mb-0 fw-bold">
+            CodeVault
         </h1>
         <nav class="nav justify-content-center">
             <a class="nav-link text-white" href="#productos" id="nav-productos">Productos</a>
@@ -37,8 +39,21 @@
 
     <section class="hero text-center py-5 bg-primary text-white">
         <div class="container">
-            <h2>Kooyo - The One</h2>
-            <p>Formulado para absorber profundamente en los poros, este suero activo ayuda a lograr una piel libre de imperfecciones y a suavizar la tez.</p>
+            <h2>CodeVault</h2>
+            <p>Tu fuente premium de recursos de programación. Accede a códigos fuente, componentes y herramientas profesionales para potenciar tu desarrollo.</p>
+            <div class="mt-4 d-flex justify-content-center gap-3">
+                <span class="tech-badge">
+                    <i class="fab fa-js me-1"></i>JavaScript
+                </span>
+                <span class="tech-badge">
+                    <i class="fab fa-react me-1"></i>React
+                </span>
+                <span class="tech-badge">
+                    <i class="fab fa-node-js me-1"></i>Node.js
+                </span>
+                <span class="tech-badge">
+                    <i class="fab fa-python me-1"></i>Python
+                </span>
         </div>
     </section>
 
@@ -47,37 +62,69 @@
             <div class="row align-items-center">
                 <!-- Texto descriptivo -->
                 <div class="col-md-6" data-aos="fade-right" data-aos-duration="1200" data-aos-delay="300">
-                    <h2 class="text-start">Kooyo - The One</h2>
+                    <h2 class="text-start">CodeVault</h2>
                     <p class="text-start">
-                        Nuestro producto ha sido diseñado con tecnología de vanguardia para brindar los mejores resultados.
-                        Con ingredientes de alta calidad, ayuda a mejorar la apariencia de la piel, proporcionando hidratación 
-                        y protección. Este suplemento es ideal para quienes buscan una solución efectiva y natural para 
-                        mantener una piel saludable y radiante.
+                        Nuestros productos digitales han sido creados por expertos para brindarte las mejores herramientas y recursos.
+                        Con acceso inmediato y actualizaciones gratuitas, nuestros productos digitales te ayudarán a alcanzar tus objetivos
+                        de manera más eficiente y profesional.
                     </p>
                     <!-- Botón actualizado -->
                     <button class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#paymentModal">Comprar ahora</button>
                     <div class="mt-4">
-                        <p><strong>500M+</strong> Clientes felices</p>
-                        <p><strong>20M+</strong> Reseñas positivas</p>
-                        <p><strong>100%</strong> Ingredientes naturales</p>
+                        <p><strong>10K+</strong> Usuarios activos</p>
+                        <p><strong>4.9/5</strong> Calificación promedio</p>
+                        <p><strong>100%</strong> Satisfacción garantizada</p>
                     </div>
                 </div>
                 <!-- Imagen del producto y contenido interno -->
                 <div class="col-md-6 d-flex align-items-center">
                     <div class="position-relative">
-                        <img src="images/descrip/01.jpg" alt="Kooyo Product" class="img-fluid rounded shadow">
+                        <img src="images/descrip/01.jpg" alt="Producto Digital" class="img-fluid rounded shadow">
                     </div>
                     <div class="product-info ms-4">
                         <ul class="list-unstyled mb-0">
-                            <li><i class="bi bi-check-circle-fill text-success"></i> <strong>Grasas:</strong> 0.5g</li>
-                            <li><i class="bi bi-check-circle-fill text-success"></i> <strong>Sodio:</strong> 85mg</li>
-                            <li><i class="bi bi-check-circle-fill text-success"></i> <strong>Carbohidratos:</strong> 13.0g</li>
-                            <li><i class="bi bi-check-circle-fill text-success"></i> <strong>Fibra:</strong> 7.0g</li>
-                            <li><i class="bi bi-check-circle-fill text-success"></i> <strong>Azúcar:</strong> 4.0g</li>
-                            <li><i class="bi bi-check-circle-fill text-success"></i> <strong>Proteína:</strong> 21.0g</li>
-                            <li><i class="bi bi-check-circle-fill text-success"></i> <strong>Calcio:</strong> 150g</li>
-                            <li><i class="bi bi-check-circle-fill text-success"></i> <strong>Hierro:</strong> 13mg</li>
-                            <li><i class="bi bi-check-circle-fill text-success"></i> <strong>Potasio:</strong> 409mg</li>
+                            <li class="mb-3 d-flex align-items-center">
+                                <i class="bi bi-check-circle-fill text-success fs-4 me-2"></i>
+                                <div>
+                                    <strong class="d-block">Acceso Inmediato</strong>
+                                    <small class="text-muted">Descarga instantánea</small>
+                                </div>
+                            </li>
+                            <li class="mb-3 d-flex align-items-center">
+                                <i class="bi bi-check-circle-fill text-success fs-4 me-2"></i>
+                                <div>
+                                    <strong class="d-block">Formato Digital</strong>
+                                    <small class="text-muted">Compatible con todos los dispositivos</small>
+                                </div>
+                            </li>
+                            <li class="mb-3 d-flex align-items-center">
+                                <i class="bi bi-check-circle-fill text-success fs-4 me-2"></i>
+                                <div>
+                                    <strong class="d-block">Actualizaciones Gratuitas</strong>
+                                    <small class="text-muted">Siempre al día</small>
+                                </div>
+                            </li>
+                            <li class="mb-3 d-flex align-items-center">
+                                <i class="bi bi-check-circle-fill text-success fs-4 me-2"></i>
+                                <div>
+                                    <strong class="d-block">Soporte 24/7</strong>
+                                    <small class="text-muted">Asistencia técnica permanente</small>
+                                </div>
+                            </li>
+                            <li class="mb-3 d-flex align-items-center">
+                                <i class="bi bi-check-circle-fill text-success fs-4 me-2"></i>
+                                <div>
+                                    <strong class="d-block">Garantía de 30 días</strong>
+                                    <small class="text-muted">Devolución sin preguntas</small>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <i class="bi bi-check-circle-fill text-success fs-4 me-2"></i>
+                                <div>
+                                    <strong class="d-block">Multi-plataforma</strong>
+                                    <small class="text-muted">Funciona en cualquier sistema</small>
+                                </div>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -87,21 +134,52 @@
 
     <section id="historia" class="history py-5">
         <div class="container">
-            <h2 class="text-center mb-5">Nuestra Historia</h2>
+            <h2 class="text-center mb-5 display-4 fw-bold text-primary">Nuestra Historia</h2>
             <div class="row align-items-center">
                 <div class="col-md-6" data-aos="fade-right" data-aos-duration="1200">
-                    <h3 class="fw-bold">El Origen de Kooyo</h3>
-                    <p>
-                        Kooyo nació con la misión de revolucionar el cuidado personal y la salud. Inspirados por la naturaleza y respaldados por la ciencia, 
-                        desarrollamos productos que combinan ingredientes naturales con tecnología avanzada para ofrecer resultados excepcionales.
-                    </p>
-                    <p>
-                        Desde nuestros humildes comienzos, hemos trabajado incansablemente para garantizar que cada producto sea de la más alta calidad, 
-                        ayudando a millones de personas a alcanzar su máximo potencial de bienestar.
-                    </p>
+                    <div class="history-content p-4 rounded-3 shadow-lg bg-white">
+                        <h3 class="fw-bold text-primary mb-4">El Origen de CodeVault</h3>
+                        <div class="timeline">
+                            <div class="timeline-item mb-4">
+                                <div class="timeline-content">
+                                    <p class="lead mb-3">
+                                        CodeVault nació con la misión de democratizar el acceso a recursos de programación de alta calidad. Inspirados por la necesidad de herramientas confiables y bien documentadas, 
+                                        desarrollamos una plataforma que combina código fuente profesional con documentación detallada para ofrecer soluciones excepcionales.
+                                    </p>
+                                    <p class="lead">
+                                        Desde nuestros inicios, hemos trabajado incansablemente para garantizar que cada recurso sea de la más alta calidad, 
+                                        ayudando a miles de desarrolladores a alcanzar su máximo potencial en el mundo de la programación.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <div class="d-flex gap-3">
+                                <div class="stat-box text-center p-3 rounded-3 bg-primary text-white">
+                                    <h4 class="mb-0">1000+</h4>
+                                    <small>Recursos</small>
+                                </div>
+                                <div class="stat-box text-center p-3 rounded-3 bg-primary text-white">
+                                    <h4 class="mb-0">50K+</h4>
+                                    <small>Desarrolladores</small>
+                                </div>
+                                <div class="stat-box text-center p-3 rounded-3 bg-primary text-white">
+                                    <h4 class="mb-0">4.9/5</h4>
+                                    <small>Calificación</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-md-6" data-aos="fade-left" data-aos-duration="1200">
-                    <img src="images/histo/01.jpg" alt="Historia de Kooyo" class="img-fluid rounded shadow historia-img">
+                    <div class="position-relative">
+                        <img src="images/histo/01.jpg" alt="Historia de CodeVault" class="img-fluid rounded-3 shadow-lg historia-img">
+                        <div class="position-absolute top-0 end-0 m-3">
+                            <span class="badge bg-primary p-2 rounded-pill">
+                                <i class="fas fa-code me-1"></i> Desde 2020
+                            </span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -112,28 +190,40 @@
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="images/01.jpg" class="card-img-top" alt="Energy Boost">
+                        <img src="images/01.jpg" class="card-img-top" alt="Pack JavaScript">
                         <div class="card-body text-center">
-                            <h3 class="card-title">Energy Boost</h3>
-                            <p class="card-text">Un suplemento diseñado para mejorar tus niveles de energía y ayudarte a mantenerte activo durante todo el día.</p>
+                            <h3 class="card-title">Pack JavaScript Pro</h3>
+                            <p class="card-text">Colección completa de scripts y componentes JavaScript para desarrollo web moderno.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <span class="text-dark fw-bold">$29.99</span>
+                                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#paymentModal">Comprar</button>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="images/02.jpg" class="card-img-top" alt="Muscle Growth">
+                        <img src="images/02.jpg" class="card-img-top" alt="Curso React">
                         <div class="card-body text-center">
-                            <h3 class="card-title">Muscle Growth</h3>
-                            <p class="card-text">Ideal para apoyar el crecimiento muscular y mantener una piel radiante y saludable.</p>
+                            <h3 class="card-title">Curso React Master</h3>
+                            <p class="card-text">Aprende React.js desde cero hasta nivel avanzado con proyectos prácticos.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <span class="text-dark fw-bold">$49.99</span>
+                                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#paymentModal">Comprar</button>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="images/03.jpg" class="card-img-top" alt="Recovery Pro">
+                        <img src="images/03.jpg" class="card-img-top" alt="API Templates">
                         <div class="card-body text-center">
-                            <h3 class="card-title">Recovery Pro</h3>
-                            <p class="card-text">Formulado para el rejuvenecimiento celular y para restaurar la energía después de un día agotador.</p>
+                            <h3 class="card-title">API Templates</h3>
+                            <p class="card-text">Plantillas y ejemplos de APIs RESTful con Node.js, Express y MongoDB.</p>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <span class="text-dark fw-bold">$39.99</span>
+                                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#paymentModal">Comprar</button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -146,63 +236,66 @@
             <div class="row text-center mb-4">
                 <div class="col-md-4">
                     <div class="d-flex flex-column align-items-center">
-                        <h3>50+</h3>
-                        <p>Productos</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="d-flex flex-column align-items-center">
                         <h3>100+</h3>
-                        <p>Franquicias</p>
+                        <p>Códigos Fuente</p>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="d-flex flex-column align-items-center">
-                        <h3>1$ Million+</h3>
-                        <p>Ventas</p>
+                        <h3>50+</h3>
+                        <p>Tutoriales</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="d-flex flex-column align-items-center">
+                        <h3>4.9/5</h3>
+                        <p>Calificación</p>
                     </div>
                 </div>
             </div>
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="images/featured/01.jpg" class="card-img-top" alt="NMN el Único">
+                        <img src="images/featured/01.jpg" class="card-img-top" alt="Vue.js Components">
                         <div class="card-body">
-                            <h3 class="card-title">Méritos Formados Cazados Incapaces Simplemente Desde Entonces</h3>
-                            <p class="card-text">La posesión de la simplicidad poco agradable es poco común. Notablemente encantador al anunciarse con súplicas favorables.</p>
+                            <h3 class="card-title">Vue.js Components</h3>
+                            <p class="card-text">Colección de componentes Vue.js reutilizables y personalizables.</p>
                             <ul>
-                                <li>A punto de estar en términos de voz. Igual sería encontrado con sentido.</li>
-                                <li>La amistad particular suficiente terminó frecuentemente por sí misma.</li>
+                                <li>Componentes modernos</li>
+                                <li>Documentación completa</li>
+                                <li>Soporte TypeScript</li>
                             </ul>
-                            <!-- Botón actualizado -->
+                            <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#paymentModal">Comprar Ahora</button>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="images/featured/02.jpg" class="card-img-top" alt="Sueño el Único">
+                        <img src="images/featured/02.jpg" class="card-img-top" alt="Python Data Science">
                         <div class="card-body">
-                            <h3 class="card-title">Resolviendo Descuidos Tolerablemente Pero Existencia</h3>
-                            <p class="card-text">La colina vendió jamón, los hombres perdieron el caso. Las vistas de la morada escucharon bromas también. Fue una solicitud encantadora descubierta recolectando el día del hombre.</p>
+                            <h3 class="card-title">Python Data Science</h3>
+                            <p class="card-text">Scripts y notebooks para análisis de datos y machine learning.</p>
                             <ul>
-                                <li>Subió más si el caso ruidoso estaba en el techo. La música retrasada vivió en ruido.</li>
-                                <li>Las criadas me dieron una posición amplia. Ciertamente, decir que sufría su intención de promoción recolectada.</li>
+                                <li>Pandas & NumPy</li>
+                                <li>Scikit-learn</li>
+                                <li>Visualización de datos</li>
                             </ul>
-                            <!-- Botón actualizado -->
+                            <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#paymentModal">Comprar Ahora</button>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="card">
-                        <img src="images/featured/03.jpg" class="card-img-top" alt="Cheers el Único">
+                        <img src="images/featured/03.jpg" class="card-img-top" alt="DevOps Tools">
                         <div class="card-body">
-                            <h3 class="card-title">Diez Los Sentimientos Más Empinados Acelerados Agradables</h3>
-                            <p class="card-text">Un hermano lo hace contra minutos incivilizados. No puede ordenar cálidamente su cesta marcada. Lideró el aumento de gastos, sin embargo, el clima musical del dominio.</p>
+                            <h3 class="card-title">DevOps Tools</h3>
+                            <p class="card-text">Scripts y configuraciones para automatización y CI/CD.</p>
                             <ul>
-                                <li>Nosotros, el señor, evitamos el dolor. Agregando completamente sus habilidades descuidadas.</li>
-                                <li>Vio tarde cualquier tamaño que el hombre quisiera. Qué manera equivocada agregó dijo trato.</li>
+                                <li>Docker & Kubernetes</li>
+                                <li>GitHub Actions</li>
+                                <li>Jenkins pipelines</li>
                             </ul>
-                            <!-- Botón actualizado -->
+                            <button class="btn btn-primary w-100" data-bs-toggle="modal" data-bs-target="#paymentModal">Comprar Ahora</button>
                         </div>
                     </div>
                 </div>
@@ -212,71 +305,89 @@
     
     <section id="equipo" class="more-products py-5">
         <div class="container">
-            <h2 class="text-center mb-5 text-white">Conoce a nuestro equipo</h2>
-            <p class="text-center text-light mb-5">
-                Nuestro equipo está compuesto por profesionales apasionados que trabajan incansablemente para ofrecer los mejores productos y servicios. ¡Conócelos!
+            <h2 class="text-center mb-5 display-4 fw-bold text-primary">Productos Digitales Premium</h2>
+            <p class="text-center lead mb-5">
+                Descubre nuestra colección de recursos digitales de alta calidad para desarrolladores y programadores.
             </p>
             <div class="row g-4">
                 <div class="col-md-3">
-                    <div class="product-card text-center p-4">
-                        <img src="images/prod/01.jpg" alt="Electrolitos Esenciales" class="img-fluid mb-3">
-                        <h4>Electrolitos Esenciales</h4>
-                        <div class="d-flex justify-content-between align-items-center">
+                    <div class="product-card text-center p-4 rounded-3 shadow-lg bg-white">
+                        <img src="images/prod/01.jpg" alt="Pack JavaScript Pro" class="img-fluid rounded-3 mb-3 product-img">
+                        <h4 class="text-primary">Pack JavaScript Pro</h4>
+                        <p class="text-muted">Colección completa de scripts y componentes</p>
+                        <div class="tech-stack d-flex justify-content-center gap-2 mb-3">
+                            <span class="badge bg-primary">JavaScript</span>
+                            <span class="badge bg-primary">React</span>
+                            <span class="badge bg-primary">Node.js</span>
+                        </div>
+                        <p class="small">Incluye documentación detallada y ejemplos prácticos.</p>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <span class="text-dark fw-bold">$29.99</span>
                             <div class="cart-container d-flex align-items-center">
                                 <i class="bi bi-cart-plus fs-4 text-dark me-2 cart-icon" role="button"></i>
                                 <span class="cart-count badge bg-primary">0</span>
                             </div>
-                            <span class="text-dark fw-bold">$47.50</span>
                         </div>
-                        <p class="free-shipping-message text-success mt-2" style="display: none;">¡ENVÍO GRATIS disponible!</p>
-<p class="add-more-message text-muted mt-2">Añade 2 bolsas más para obtener <span class="text-success">ENVÍO GRATIS</span>.</p>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="product-card text-center p-4">
-                        <img src="images/prod/02.jpg" alt="Supergreens" class="img-fluid mb-3">
-                        <h4>Supergreens</h4>
-                        <div class="d-flex justify-content-between align-items-center">
+                    <div class="product-card text-center p-4 rounded-3 shadow-lg bg-white">
+                        <img src="images/prod/02.jpg" alt="Curso Vue.js Master" class="img-fluid rounded-3 mb-3 product-img">
+                        <h4 class="text-primary">Curso Vue.js Master</h4>
+                        <p class="text-muted">Aprende Vue.js desde cero hasta avanzado</p>
+                        <div class="tech-stack d-flex justify-content-center gap-2 mb-3">
+                            <span class="badge bg-primary">Vue.js</span>
+                            <span class="badge bg-primary">TypeScript</span>
+                            <span class="badge bg-primary">Vuex</span>
+                        </div>
+                        <p class="small">Incluye proyectos prácticos y certificado.</p>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <span class="text-dark fw-bold">$49.99</span>
                             <div class="cart-container d-flex align-items-center">
                                 <i class="bi bi-cart-plus fs-4 text-dark me-2 cart-icon" role="button"></i>
                                 <span class="cart-count badge bg-primary">0</span>
                             </div>
-                            <span class="text-dark fw-bold">$30</span>
                         </div>
-                        <p class="free-shipping-message text-success mt-2" style="display: none;">¡ENVÍO GRATIS disponible!</p>
-<p class="add-more-message text-muted mt-2">Añade 2 bolsas más para obtener <span class="text-success">ENVÍO GRATIS</span>.</p>
                     </div>
                 </div>
-                
                 <div class="col-md-3">
-                    <div class="product-card text-center p-4">
-                        <img src="images/prod/03.jpg" alt="Proteína Whey" class="img-fluid mb-3">
-                        <h4>Proteína Whey</h4>
-                        <div class="d-flex justify-content-between align-items-center">
+                    <div class="product-card text-center p-4 rounded-3 shadow-lg bg-white">
+                        <img src="images/prod/03.jpg" alt="API Templates Pro" class="img-fluid rounded-3 mb-3 product-img">
+                        <h4 class="text-primary">API Templates Pro</h4>
+                        <p class="text-muted">Plantillas y ejemplos de APIs RESTful</p>
+                        <div class="tech-stack d-flex justify-content-center gap-2 mb-3">
+                            <span class="badge bg-primary">Python</span>
+                            <span class="badge bg-primary">Django</span>
+                            <span class="badge bg-primary">AWS</span>
+                        </div>
+                        <p class="small">Incluye documentación y pruebas automatizadas.</p>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <span class="text-dark fw-bold">$39.99</span>
                             <div class="cart-container d-flex align-items-center">
                                 <i class="bi bi-cart-plus fs-4 text-dark me-2 cart-icon" role="button"></i>
                                 <span class="cart-count badge bg-primary">0</span>
                             </div>
-                            <span class="text-dark fw-bold">$35</span>
                         </div>
-                        <p class="free-shipping-message text-success mt-2" style="display: none;">¡ENVÍO GRATIS disponible!</p>
-<p class="add-more-message text-muted mt-2">Añade 2 bolsas más para obtener <span class="text-success">ENVÍO GRATIS</span>.</p>
                     </div>
                 </div>
-                
                 <div class="col-md-3">
-                    <div class="product-card text-center p-4">
-                        <img src="images/prod/04.jpg" alt="Rosehip Ylang" class="img-fluid mb-3">
-                        <h4>Rosehip Ylang</h4>
-                        <div class="d-flex justify-content-between align-items-center">
+                    <div class="product-card text-center p-4 rounded-3 shadow-lg bg-white">
+                        <img src="images/prod/04.jpg" alt="DevOps Toolkit" class="img-fluid rounded-3 mb-3 product-img">
+                        <h4 class="text-primary">DevOps Toolkit</h4>
+                        <p class="text-muted">Scripts y configuraciones para DevOps</p>
+                        <div class="tech-stack d-flex justify-content-center gap-2 mb-3">
+                            <span class="badge bg-primary">Docker</span>
+                            <span class="badge bg-primary">Kubernetes</span>
+                            <span class="badge bg-primary">CI/CD</span>
+                        </div>
+                        <p class="small">Incluye guías de implementación y soporte.</p>
+                        <div class="d-flex justify-content-between align-items-center mt-3">
+                            <span class="text-dark fw-bold">$59.99</span>
                             <div class="cart-container d-flex align-items-center">
                                 <i class="bi bi-cart-plus fs-4 text-dark me-2 cart-icon" role="button"></i>
                                 <span class="cart-count badge bg-primary">0</span>
                             </div>
-                            <span class="text-dark fw-bold">$39</span>
                         </div>
-                        <p class="free-shipping-message text-success mt-2" style="display: none;">¡ENVÍO GRATIS disponible!</p>
-<p class="add-more-message text-muted mt-2">Añade 2 bolsas más para obtener <span class="text-success">ENVÍO GRATIS</span>.</p>
                     </div>
                 </div>
             </div>
@@ -294,12 +405,12 @@
                             <div class="col-md-4">
                                 <div class="testimonial-box p-4 bg-white shadow-sm rounded">
                                     <div class="stars mb-3">★★★★★</div>
-                                    <p>"Kooyo ha transformado mi rutina diaria. Ahora tengo más energía y mi piel nunca se ha visto mejor. ¡Es un producto increíble!"</p>
+                                    <p>"Las plantillas web premium han revolucionado mi trabajo. Son fáciles de personalizar y el soporte es excelente. ¡Altamente recomendadas!"</p>
                                     <div class="d-flex align-items-center mt-4">
                                         <img src="images/ceos/01.jpg" alt="User 1" class="rounded-circle me-3" width="50">
                                         <div>
-                                            <h6 class="mb-0">Serhiy Hipskyy</h6>
-                                            <small>CEO Universal</small>
+                                            <h6 class="mb-0">Carlos Rodríguez</h6>
+                                            <small>Diseñador Web Freelance</small>
                                         </div>
                                     </div>
                                 </div>
@@ -307,25 +418,25 @@
                             <div class="col-md-4">
                                 <div class="testimonial-box p-4 bg-white shadow-sm rounded">
                                     <div class="stars mb-3">★★★★★</div>
-                                    <p>"Nunca pensé que un suplemento pudiera hacer tanto por mi bienestar. Kooyo es ahora parte esencial de mi vida."</p>
+                                    <p>"El curso de marketing digital superó mis expectativas. El contenido es actualizado y práctico. Ya he implementado varias estrategias con éxito."</p>
                                     <div class="d-flex align-items-center mt-4">
                                         <img src="images/ceos/02.jpg" alt="User 2" class="rounded-circle me-3" width="50">
                                         <div>
-                                            <h6 class="mb-0">Justus Menke</h6>
-                                            <small>CEO Eronaman</small>
+                                            <h6 class="mb-0">Ana Martínez</h6>
+                                            <small>Marketing Manager</small>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="testimonial-box p-4 bg-white shadow-sm rounded">
-                                    <div class="stars mb-3">★★★★</div>
-                                    <p>"Desde que uso Kooyo, he notado una gran diferencia en mi energía y en cómo me siento cada día. ¡Altamente recomendado!"</p>
+                                    <div class="stars mb-3">★★★★★</div>
+                                    <p>"Los recursos creativos son de alta calidad y me han ahorrado mucho tiempo en mis proyectos. La actualización gratuita es un plus increíble."</p>
                                     <div class="d-flex align-items-center mt-4">
                                         <img src="images/ceos/03.jpg" alt="User 3" class="rounded-circle me-3" width="50">
                                         <div>
-                                            <h6 class="mb-0">Britain Eriksen</h6>
-                                            <small>CEO Universal</small>
+                                            <h6 class="mb-0">David López</h6>
+                                            <small>Diseñador Gráfico</small>
                                         </div>
                                     </div>
                                 </div>
@@ -338,25 +449,25 @@
                             <div class="col-md-4">
                                 <div class="testimonial-box p-4 bg-white shadow-sm rounded">
                                     <div class="stars mb-3">★★★★★</div>
-                                    <p>"Kooyo es un producto revolucionario. Mi piel se siente más suave y saludable, y mi energía ha mejorado notablemente."</p>
+                                    <p>"La calidad de los productos digitales es excepcional. El soporte técnico es rápido y eficiente. ¡No puedo estar más satisfecho!"</p>
                                     <div class="d-flex align-items-center mt-4">
                                         <img src="images/ceos/04.jpg" alt="User 4" class="rounded-circle me-3" width="50">
                                         <div>
-                                            <h6 class="mb-0">Alex Johnson</h6>
-                                            <small>CTO TechCorp</small>
+                                            <h6 class="mb-0">Laura Sánchez</h6>
+                                            <small>Desarrolladora Web</small>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="testimonial-box p-4 bg-white shadow-sm rounded">
-                                    <div class="stars mb-3">★★★★</div>
-                                    <p>"He probado muchos productos, pero Kooyo realmente destaca. Es efectivo, natural y fácil de incorporar a mi rutina."</p>
+                                    <div class="stars mb-3">★★★★★</div>
+                                    <p>"Invertir en estos productos digitales fue la mejor decisión para mi negocio. La relación calidad-precio es excelente."</p>
                                     <div class="d-flex align-items-center mt-4">
                                         <img src="images/ceos/05.jpg" alt="User 5" class="rounded-circle me-3" width="50">
                                         <div>
-                                            <h6 class="mb-0">Maria Lopez</h6>
-                                            <small>Founder StartUp</small>
+                                            <h6 class="mb-0">Miguel Torres</h6>
+                                            <small>Emprendedor Digital</small>
                                         </div>
                                     </div>
                                 </div>
@@ -382,8 +493,8 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-md-8">
-                <h3 class="mb-3">Suscríbete para recibir actualizaciones diarias</h3>
-                <p>Mantente al día con las últimas noticias y ofertas. ¡Únete a nuestra comunidad y no te pierdas nada!</p>
+                <h3 class="mb-3">Únete a nuestra comunidad digital</h3>
+                <p>Recibe acceso anticipado a nuevos productos digitales, descuentos exclusivos y recursos gratuitos. ¡Mantente actualizado con las últimas tendencias!</p>
             </div>
             <div class="col-md-4">
                 <form class="d-flex">
@@ -400,8 +511,8 @@
     <div class="container">
         <div class="row">
             <div class="col-md-4">
-                <h5>Kooyo</h5>
-                <p>Particularmente suficiente e imposible por una expresión razonable. Sin embargo, una preferencia desagradable.</p>
+                <h5>Kooyo Digital</h5>
+                <p>Tu fuente confiable de productos digitales premium. Ofrecemos recursos de alta calidad para profesionales y creativos.</p>
                 <div class="social-icons">
                     <a href="#" class="text-white me-3"><i class="bi bi-facebook"></i></a>
                     <a href="#" class="text-white me-3"><i class="bi bi-twitter"></i></a>
@@ -409,37 +520,39 @@
                 </div>
             </div>
             <div class="col-md-2">
-                <h6>Menú</h6>
+                <h6>Productos</h6>
                 <ul class="list-unstyled">
-                    <li><a href="#" class="text-white">Donaciones</a></li>
-                    <li><a href="#" class="text-white">Características</a></li>
-                    <li><a href="#" class="text-white">Categoría</a></li>
-                    <li><a href="#" class="text-white">Voluntariado</a></li>
-                    <li><a href="#" class="text-white">Sobre Nosotros</a></li>
+                    <li><a href="#" class="text-white">Plantillas Web</a></li>
+                    <li><a href="#" class="text-white">Cursos Online</a></li>
+                    <li><a href="#" class="text-white">Recursos Gráficos</a></li>
+                    <li><a href="#" class="text-white">Templates</a></li>
+                    <li><a href="#" class="text-white">Recursos Digitales</a></li>
                 </ul>
             </div>
             <div class="col-md-2">
                 <h6>Categorías</h6>
                 <ul class="list-unstyled">
-                    <li><a href="#" class="text-white">Comida Saludable</a></li>
-                    <li><a href="#" class="text-white">Educación</a></li>
-                    <li><a href="#" class="text-white">Agua Limpia</a></li>
-                    <li><a href="#" class="text-white">Ayuda Médica</a></li>
+                    <li><a href="#" class="text-white">Diseño Web</a></li>
+                    <li><a href="#" class="text-white">Marketing Digital</a></li>
+                    <li><a href="#" class="text-white">Desarrollo</a></li>
+                    <li><a href="#" class="text-white">Creatividad</a></li>
                 </ul>
             </div>
             <div class="col-md-2">
-                <h6>Sobre Nosotros</h6>
+                <h6>Soporte</h6>
                 <ul class="list-unstyled">
-                    <li><a href="#" class="text-white">¿Quiénes somos?</a></li>
-                    <li><a href="#" class="text-white">Contáctanos</a></li>
-                    <li><a href="#" class="text-white">Preguntas Frecuentes</a></li>
-                    <li><a href="#" class="text-white">Ayuda</a></li>
+                    <li><a href="#" class="text-white">Centro de Ayuda</a></li>
+                    <li><a href="#" class="text-white">Contacto</a></li>
+                    <li><a href="#" class="text-white">FAQ</a></li>
+                    <li><a href="#" class="text-white">Documentación</a></li>
                 </ul>
             </div>
         </div>
     </div>
 </footer>
 
+<!-- Modal de método de pago -->
+<!-- Modal de método de pago -->
 <div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
@@ -450,212 +563,57 @@
             <div class="modal-body">
                 <div class="container">
                     <div class="row">
-                        <!-- Opciones de pago -->
-                        <div class="col-md-8">
-                            <h6>Método de pago</h6>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="paymentMethod" id="creditCard" checked>
-                                <label class="form-check-label" for="creditCard">
-                                    <i class="bi bi-credit-card-2-front-fill"></i> Tarjeta de Crédito (Visa, MasterCard)
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="paymentMethod" id="cash">
-                                <label class="form-check-label" for="cash">
-                                    <i class="bi bi-cash-stack"></i> Efectivo (BCP)
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="paymentMethod" id="bankTransfer">
-                                <label class="form-check-label" for="bankTransfer">
-                                    <i class="bi bi-bank"></i> Transferencia Bancaria
-                                </label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="paymentMethod" id="paypal">
-                                <label class="form-check-label" for="paypal">
-                                    <i class="bi bi-paypal"></i> PayPal
-                                </label>
-                            </div>
-
-                            <!-- Formulario de Tarjeta de Crédito -->
-                            <div id="creditCardForm" class="mt-4">
-                                <h6>Detalles de la Tarjeta de Crédito</h6>
-                                <div class="mb-3">
-                                    <label for="cardNumber" class="form-label">Número de Tarjeta</label>
-                                    <input type="text" id="cardNumber" class="form-control" placeholder="Ingrese el número de tarjeta">
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6 mb-3">
-                                        <label for="expiryDate" class="form-label">Fecha de Expiración (MM/AA)</label>
-                                        <input type="text" id="expiryDate" class="form-control" placeholder="MM/AA">
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label for="cvv" class="form-label">CVV</label>
-                                        <input type="text" id="cvv" class="form-control" placeholder="CVV">
-                                    </div>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="installments" class="form-label">Cuotas</label>
-                                    <select id="installments" class="form-select">
-                                        <option value="1">1 cuota</option>
-                                        <option value="3">3 cuotas</option>
-                                        <option value="6">6 cuotas</option>
-                                        <option value="12">12 cuotas</option>
-                                    </select>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6 mb-3">
-                                        <label for="firstName" class="form-label">Nombre</label>
-                                        <input type="text" id="firstName" class="form-control" placeholder="Ingrese su nombre">
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label for="lastName" class="form-label">Apellido</label>
-                                        <input type="text" id="lastName" class="form-control" placeholder="Ingrese su apellido">
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6 mb-3">
-                                        <label for="documentType" class="form-label">Tipo de Documento</label>
-                                        <select id="documentType" class="form-select">
-                                            <option value="dni">DNI</option>
-                                            <option value="passport">Pasaporte</option>
-                                            <option value="other">Otro</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label for="documentNumber" class="form-label">Número de Documento</label>
-                                        <input type="text" id="documentNumber" class="form-control" placeholder="Ingrese el número de documento">
-                                    </div>
-                                </div>
-                                <div class="mb-3">
-                                    <label for="email" class="form-label">Correo Electrónico</label>
-                                    <input type="email" id="email" class="form-control" placeholder="Ingrese su correo electrónico">
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Formulario de Efectivo -->
-<div id="cashForm" class="mt-4" style="display: none;">
-    <h6>Detalles de Pago en Efectivo</h6>
-    <div class="row">
-        <div class="col-md-6 mb-3">
-            <label for="cashFirstName" class="form-label">Nombre</label>
-            <input type="text" id="cashFirstName" class="form-control" placeholder="Ingrese su nombre">
-        </div>
-        <div class="col-md-6 mb-3">
-            <label for="cashLastName" class="form-label">Apellido</label>
-            <input type="text" id="cashLastName" class="form-control" placeholder="Ingrese su apellido">
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6 mb-3">
-            <label for="cashDocumentType" class="form-label">Tipo de Documento</label>
-            <select id="cashDocumentType" class="form-select">
-                <option value="dni">DNI</option>
-                <option value="passport">Pasaporte</option>
-                <option value="other">Otro</option>
-            </select>
-        </div>
-        <div class="col-md-6 mb-3">
-            <label for="cashDocumentNumber" class="form-label">Número de Documento</label>
-            <input type="text" id="cashDocumentNumber" class="form-control" placeholder="Ingrese el número de documento">
-        </div>
-    </div>
-    <div class="mb-3">
-        <label for="cashEmail" class="form-label">Correo Electrónico</label>
-        <input type="email" id="cashEmail" class="form-control" placeholder="Ingrese su correo electrónico">
-    </div>
-</div>
-                        <!-- Formulario de Transferencia Bancaria -->
-                        <div id="bankTransferForm" class="mt-4" style="display: none;">
-                            <h6>Detalles de Transferencia Bancaria</h6>
-                            <div class="mb-3">
-                                <label for="bankName" class="form-label">Nombre del Banco</label>
-                                <select id="bankName" class="form-select">
-                                    <option value="Banco de Crédito del Perú">Banco de Crédito del Perú</option>
-                                    <option value="BBVA">BBVA</option>
-                                    <option value="Interbank">Interbank</option>
-                                    <option value="Scotiabank">Scotiabank</option>
-                                    <option value="Banco Pichincha">Banco Pichincha</option>
-                                    <option value="Banco Falabella">Banco Falabella</option>
-                                    <option value="Banco Ripley">Banco Ripley</option>
-                                    <option value="Banco GNB">Banco GNB</option>
-                                    <option value="Banco Santander Perú">Banco Santander Perú</option>
-                                    <option value="Banco de Comercio">Banco de Comercio</option>
-                                </select>
-                            </div>
-                            <div class="mb-3">
-                                <label for="accountNumber" class="form-label">Número de Cuenta</label>
-                                <input type="text" id="accountNumber" class="form-control" placeholder="Ingrese el número de cuenta">
-                            </div>
-                            <div class="mb-3">
-                                <label for="accountHolder" class="form-label">Nombre del Titular</label>
-                                <input type="text" id="accountHolder" class="form-control" placeholder="Ingrese el nombre del titular">
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <label for="bankDocumentType" class="form-label">Tipo de Documento</label>
-                                    <select id="bankDocumentType" class="form-select">
-                                        <option value="dni">DNI</option>
-                                        <option value="passport">Pasaporte</option>
-                                        <option value="other">Otro</option>
-                                    </select>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <label for="bankDocumentNumber" class="form-label">Número de Documento</label>
-                                    <input type="text" id="bankDocumentNumber" class="form-control" placeholder="Ingrese el número de documento">
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <label for="bankEmail" class="form-label">Correo Electrónico</label>
-                                <input type="email" id="bankEmail" class="form-control" placeholder="Ingrese su correo electrónico">
-                            </div>
-                        </div>
-    <!-- Formulario de PayPal -->
-    <div id="paypalForm" class="mt-4" style="display: none;">
-        <h6>Detalles de PayPal</h6>
-        <div class="mb-3">
-            <label for="paypalEmail" class="form-label">Correo Electrónico de PayPal</label>
-            <input type="email" id="paypalEmail" class="form-control" placeholder="Ingrese su correo de PayPal">
-        </div>
-    </div>
-                            <!-- Resumen del Pago -->
-                            <div class="col-md-4">
-                                <h6>Resumen del Pago</h6>
-                                <p><strong>Total:</strong> <span id="paymentTotal">$0.00</span></p>
-                                <button id="confirmPayment" class="btn btn-primary w-100">Confirmar Pago</button>
-                            </div>
-                        </div>
+                        <!-- Contenedor del botón de PayPal -->
+                        <div id="paypal-button-container"></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
-<!-- Modal para la boleta -->
-<div class="modal fade" id="receiptModal" tabindex="-1" aria-labelledby="receiptModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="receiptModalLabel">Boleta de Pago</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
-            </div>
-            <div class="modal-body">
-                <h6>Detalles del Pago</h6>
-                <p><strong>Método de Pago:</strong> <span id="receiptPaymentMethod"></span></p>
-                <p><strong>Monto:</strong> S/ <span id="receiptAmount"></span></p>
-                <h6>Detalles del Cliente</h6>
-                <p><strong>Nombre:</strong> <span id="receiptName"></span></p>
-                <p><strong>Correo Electrónico:</strong> <span id="receiptEmail"></span></p>
-                <p><strong>Número de Documento:</strong> <span id="receiptDocument"></span></p>
-            </div>
-            <div class="modal-footer">
-                <button id="downloadReceipt" class="btn btn-primary">Descargar PDF</button>
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+<!-- Incluir el SDK de PayPal -->
+
+
+<script>
+        paypal.Buttons({
+            style:{
+                color: 'blue',
+                shape: 'pill',
+                label: 'pay',
+            },
+            createOrder: function(data, actions) {
+                return actions.order.create({
+                    purchase_units: [{
+                        amount: {
+                            value: 100
+                        }
+                    }]
+                });
+            },
+
+            onApprove: function(data, actions){
+                actions.order.capture().then(function(detalles){
+                    console.log(detalles);
+                });
+
+            },
+
+            onCancel: function(data) {
+                alert("Pago Cancelado");
+                console.log(data);
+            },
+        }).render('#paypal-button-container');
+</script>
+
+
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
 
 <div id="cart-sidebar" class="cart-sidebar">
     <div class="cart-header d-flex justify-content-between align-items-center">
@@ -1256,18 +1214,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 </script>
-    
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-    const checkoutButton = document.getElementById('checkout');
-    const paymentTotal = document.getElementById('paymentTotal');
-    const cartTotal = document.getElementById('cart-total');
-
-    // Evento para abrir el modal de métodos de pago y actualizar el total
-    checkoutButton.addEventListener('click', function () {
-        paymentTotal.textContent = cartTotal.textContent; // Actualiza el total en el modal
-    });
-});
-</script>
+</body> 
 </body>
 </html>
