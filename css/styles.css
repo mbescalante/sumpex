@@ -122,38 +122,214 @@ nav ul li a:hover {
 }
 
 .products {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 5rem 0;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(10px);
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.card-img-top {
+    height: 220px;
+    object-fit: contain;
+    background-color: #000;
+    padding: 25px;
+    transition: all 0.5s ease;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.08);
+}
+
+.card-body {
+    padding: 2rem;
     display: flex;
-    justify-content: center;
-    gap: 20px;
-    padding: 40px 20px;
-    background-color: #fff;
+    flex-direction: column;
+    justify-content: space-between;
+    height: calc(100% - 220px);
 }
 
-.product {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #212529;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.card-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(90deg, #007bff, #00c6ff);
+    border-radius: 3px;
+    transition: width 0.3s ease;
+}
+
+.card:hover .card-title::after {
+    width: 100px;
+}
+
+.card-text {
+    color: #6c757d;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    flex-grow: 1;
+}
+
+.text-dark.fw-bold {
+    font-size: 1.4rem;
+    color: #28a745 !important;
+    font-weight: 700 !important;
+    position: relative;
+    display: inline-block;
+}
+
+.text-dark.fw-bold::before {
+    content: '$';
+    font-size: 0.8em;
+    position: absolute;
+    left: -15px;
+    top: 0;
+    color: #28a745;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #007bff, #00c6ff);
+    border: none;
+    border-radius: 50px;
+    padding: 0.6rem 1.5rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(90deg, #0056b3, #0099ff);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.4);
+}
+
+.btn-primary:active {
+    transform: translateY(-1px);
+}
+
+/* Animación de entrada para las tarjetas */
+.card {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Aplicar retraso a cada tarjeta */
+.col-md-4:nth-child(1) .card {
+    animation-delay: 0.1s;
+}
+
+.col-md-4:nth-child(2) .card {
+    animation-delay: 0.3s;
+}
+
+.col-md-4:nth-child(3) .card {
+    animation-delay: 0.5s;
+}
+
+/* Estilos para el modal de pago */
+.modal-content {
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    overflow: hidden;
+}
+
+.modal-header {
+    background: linear-gradient(90deg, #007bff, #00c6ff);
+    color: white;
+    border-bottom: none;
+    padding: 1.5rem;
+}
+
+.modal-title {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.modal-body {
+    padding: 2rem;
+}
+
+#paypal-button-container {
+    margin-top: 1.5rem;
+}
+
+/* Estilos para la boleta */
+.invoice-container {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    padding: 2rem;
+}
+
+.invoice-container h4 {
+    color: #007bff;
+    font-weight: 700;
+}
+
+.invoice-container h5 {
+    color: #212529;
+    font-weight: 600;
+}
+
+.invoice-container .table {
     border-radius: 10px;
-    padding: 20px;
-    text-align: center;
-    width: 250px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
 }
 
-.product:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+.invoice-container .table th {
+    background: #f8f9fa;
+    font-weight: 600;
 }
 
-.product h3 {
-    font-size: 20px;
-    margin-bottom: 10px;
-    color: #333;
+.invoice-container .table td, 
+.invoice-container .table th {
+    padding: 1rem;
 }
 
-.product p {
-    font-size: 16px;
-    color: #666;
+.invoice-container .table tfoot th {
+    background: #e9ecef;
+    font-weight: 700;
 }
 
 footer {
@@ -1091,32 +1267,4 @@ footer {
     transform: scale(1.1);
     background: #48bfe3;
     color: #fff;
-}
-
-/* Animación de entrada para las tarjetas */
-@keyframes productCardEnter {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.product-card {
-    animation: productCardEnter 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-}
-
-.product-card:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-.product-card:nth-child(3) {
-    animation-delay: 0.4s;
-}
-
-.product-card:nth-child(4) {
-    animation-delay: 0.6s;
 }
